@@ -1,0 +1,168 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+    IR-TREE MODEL 2 ONS
+
+DATA:
+     FILE = IRTREE_X.csv;
+VARIABLE:
+ NAMES =
+          em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+        e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+        eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+    aex169 cex170 nex171 oex172 oex173 aex174 cex174 oex176
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189
+;
+MISSING = .;
+USEVARIABLES =
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189
+          ;
+ANALYSIS:
+estimator = ML;
+coverage = .001;
+OUTPUT:
+ sampstat  tech1  modindices(5)  standardized;
+MODEL:
+ons by ons177@1 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189;
+INPUT_END
+2
+2
+2
+2
+ML
+1
+GENERAL
+0
+13
+1
+0
+ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185 ons186 ons187 ons188 ons189 ons
+1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0
+0
+1
+ons
+ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185 ons186 ons187 ons188 ons189
+1 1 ons ons177 1.000 0.000
+1 1 ons ons178 1.146 0.048
+1 1 ons ons179 1.403 0.052
+1 1 ons ons180 0.706 0.035
+1 1 ons ons181 0.864 0.039
+1 1 ons ons182 1.029 0.047
+1 1 ons ons183 0.473 0.024
+1 1 ons ons184 0.135 0.011
+1 1 ons ons185 1.563 0.056
+1 1 ons ons186 1.434 0.055
+1 1 ons ons187 1.023 0.040
+1 1 ons ons188 0.655 0.039
+1 1 ons ons189 1.200 0.051
+4 1 ons177 0.191 0.004
+4 1 ons178 0.182 0.004
+4 1 ons179 0.106 0.002
+4 1 ons180 0.137 0.003
+4 1 ons181 0.148 0.003
+4 1 ons182 0.202 0.004
+4 1 ons183 0.067 0.001
+4 1 ons184 0.020 0.0003668586432
+4 1 ons185 0.086 0.002
+4 1 ons186 0.143 0.003
+4 1 ons187 0.082 0.002
+4 1 ons188 0.198 0.004
+4 1 ons189 0.187 0.004
+5 1 ons 0.040 0.003
+11 1 ons ons177 0.414 0.012
+11 1 ons ons178 0.471 0.012
+11 1 ons ons179 0.650 0.009
+11 1 ons ons180 0.354 0.013
+11 1 ons ons181 0.408 0.013
+11 1 ons ons182 0.414 0.012
+11 1 ons ons183 0.342 0.013
+11 1 ons ons184 0.189 0.014
+11 1 ons ons185 0.728 0.008
+11 1 ons ons186 0.601 0.010
+11 1 ons ons187 0.580 0.010
+11 1 ons ons188 0.281 0.014
+11 1 ons ons189 0.482 0.012
+14 1 ons177 0.828 0.010
+14 1 ons178 0.778 0.011
+14 1 ons179 0.578 0.012
+14 1 ons180 0.875 0.009
+14 1 ons181 0.834 0.010
+14 1 ons182 0.828 0.010
+14 1 ons183 0.883 0.009
+14 1 ons184 0.964 0.005
+14 1 ons185 0.470 0.012
+14 1 ons186 0.638 0.012
+14 1 ons187 0.664 0.012
+14 1 ons188 0.921 0.008
+14 1 ons189 0.767 0.011
+15 1 ons 1.000 0.0000000001000
+21 1 ons ons177 0.414 0.012
+21 1 ons ons178 0.471 0.012
+21 1 ons ons179 0.650 0.009
+21 1 ons ons180 0.354 0.013
+21 1 ons ons181 0.408 0.013
+21 1 ons ons182 0.414 0.012
+21 1 ons ons183 0.342 0.013
+21 1 ons ons184 0.189 0.014
+21 1 ons ons185 0.728 0.008
+21 1 ons ons186 0.601 0.010
+21 1 ons ons187 0.580 0.010
+21 1 ons ons188 0.281 0.014
+21 1 ons ons189 0.482 0.012
+24 1 ons177 0.828 0.010
+24 1 ons178 0.778 0.011
+24 1 ons179 0.578 0.012
+24 1 ons180 0.875 0.009
+24 1 ons181 0.834 0.010
+24 1 ons182 0.828 0.010
+24 1 ons183 0.883 0.009
+24 1 ons184 0.964 0.005
+24 1 ons185 0.470 0.012
+24 1 ons186 0.638 0.012
+24 1 ons187 0.664 0.012
+24 1 ons188 0.921 0.008
+24 1 ons189 0.767 0.011
+25 1 ons 1.000 0.0000000001000
+31 1 ons ons177 0.199 0.007
+31 1 ons ons178 0.228 0.007
+31 1 ons ons179 0.279 0.006
+31 1 ons ons180 0.140 0.006
+31 1 ons ons181 0.172 0.006
+31 1 ons ons182 0.205 0.007
+31 1 ons ons183 0.094 0.004
+31 1 ons ons184 0.027 0.002
+31 1 ons ons185 0.311 0.005
+31 1 ons ons186 0.285 0.006
+31 1 ons ons187 0.203 0.005
+31 1 ons ons188 0.130 0.007
+31 1 ons ons189 0.238 0.007
+34 1 ons177 0.191 0.004
+34 1 ons178 0.182 0.004
+34 1 ons179 0.106 0.002
+34 1 ons180 0.137 0.003
+34 1 ons181 0.148 0.003
+34 1 ons182 0.202 0.004
+34 1 ons183 0.067 0.001
+34 1 ons184 0.020 0.0003668586432
+34 1 ons185 0.086 0.002
+34 1 ons186 0.143 0.003
+34 1 ons187 0.082 0.002
+34 1 ons188 0.198 0.004
+34 1 ons189 0.187 0.004
+35 1 ons 1.000 0.0000000001000

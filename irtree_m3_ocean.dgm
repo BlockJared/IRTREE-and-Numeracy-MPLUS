@@ -1,0 +1,314 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+    IR-TREE MODEL 3 OCEAN
+
+DATA:
+     FILE = IRTREE.dat;
+VARIABLE:
+ NAMES =
+          em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+        e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+        eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+    aex169 cex170 nex171 oex172 oex173 aex174 cex174 oex176
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189
+;
+MISSING = .;
+usevariables =
+        e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+;
+categorical =
+       e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+;
+ANALYSIS:
+ coverage = .001;
+OUTPUT:
+ sampstat  tech1  modindices(5)  standardized;
+MODEL:
+open by o_1@1 o_2 o_3 O_4 o_5 o_6 o_7 o_8 o_9 o_10;
+cons by c_1@1 c_2 c_3 c_4 c_5 c_6 c_7 c_8 c_9;
+extra by e_1@1 e_2 e_3 e_4 e_5 e_6 e_7 e_8;
+agree by a_1@1 a_2 a_3 a_4 a_5 a_6 a_7 a_8 a_9;
+neuro by n_1@1 n_2 n_3 n_4 n_5 n_6 n_7 n_8;
+         [open@0]; [cons@0]; [extra@0]; [agree@0]; [neuro@0];
+          open@1 ;  cons@1 ; extra@1; agree@1 ; neuro@1;
+INPUT_END
+2
+2
+2
+2
+WLSMV
+1
+GENERAL
+0
+44
+5
+0
+e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3 e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6 e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10 open cons extra agree neuro
+1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 0 0 0 0
+0
+5
+open
+o_1 o_2 o_3 o_4 o_5 o_6 o_7 o_8 o_9 o_10
+cons
+c_1 c_2 c_3 c_4 c_5 c_6 c_7 c_8 c_9
+extra
+e_1 e_2 e_3 e_4 e_5 e_6 e_7 e_8
+agree
+a_1 a_2 a_3 a_4 a_5 a_6 a_7 a_8 a_9
+neuro
+n_1 n_2 n_3 n_4 n_5 n_6 n_7 n_8
+1 1 open o_1 1.000 0.000
+1 1 open o_2 0.821 0.022
+1 1 open o_3 0.752 0.018
+1 1 open o_4 0.766 0.018
+1 1 open o_5 0.854 0.012
+1 1 open o_6 0.684 0.020
+1 1 open o_7 0.250 0.026
+1 1 open o_8 0.784 0.019
+1 1 open o_9 0.219 0.024
+1 1 open o_10 0.569 0.018
+1 1 cons c_1 1.000 0.000
+1 1 cons c_2 0.547 0.020
+1 1 cons c_3 0.860 0.031
+1 1 cons c_4 0.561 0.019
+1 1 cons c_5 0.748 0.019
+1 1 cons c_6 0.707 0.023
+1 1 cons c_7 0.802 0.022
+1 1 cons c_8 0.746 0.022
+1 1 cons c_9 0.625 0.019
+1 1 extra e_1 1.000 0.000
+1 1 extra e_2 0.591 0.016
+1 1 extra e_3 0.819 0.014
+1 1 extra e_4 0.916 0.012
+1 1 extra e_5 0.745 0.011
+1 1 extra e_6 0.745 0.015
+1 1 extra e_7 0.737 0.013
+1 1 extra e_8 0.847 0.010
+1 1 agree a_1 1.000 0.000
+1 1 agree a_2 0.673 0.028
+1 1 agree a_3 0.572 0.026
+1 1 agree a_4 0.678 0.019
+1 1 agree a_5 0.530 0.024
+1 1 agree a_6 0.656 0.019
+1 1 agree a_7 0.809 0.025
+1 1 agree a_8 0.660 0.018
+1 1 agree a_9 0.711 0.026
+1 1 neuro n_1 1.000 0.000
+1 1 neuro n_2 0.830 0.011
+1 1 neuro n_3 0.653 0.016
+1 1 neuro n_4 0.695 0.013
+1 1 neuro n_5 0.757 0.014
+1 1 neuro n_6 0.704 0.014
+1 1 neuro n_7 0.814 0.013
+1 1 neuro n_8 0.758 0.013
+2 1 cons open 0.378 0.020
+2 1 extra open 0.463 0.015
+2 1 extra cons 0.285 0.016
+2 1 agree open 0.274 0.020
+2 1 agree cons 0.440 0.017
+2 1 agree extra 0.199 0.017
+2 1 neuro open -0.236 0.017
+2 1 neuro cons -0.482 0.015
+2 1 neuro extra -0.376 0.015
+2 1 neuro agree -0.465 0.014
+5 1 open 1.000 0.000
+5 1 cons 1.000 0.000
+5 1 extra 1.000 0.000
+5 1 agree 1.000 0.000
+5 1 neuro 1.000 0.000
+11 1 open o_1 1.000 0.0000000001000
+11 1 open o_2 0.821 0.022
+11 1 open o_3 0.752 0.018
+11 1 open o_4 0.766 0.018
+11 1 open o_5 0.854 0.012
+11 1 open o_6 0.684 0.020
+11 1 open o_7 0.250 0.026
+11 1 open o_8 0.784 0.019
+11 1 open o_9 0.219 0.024
+11 1 open o_10 0.569 0.018
+11 1 cons c_1 1.000 0.0000000001000
+11 1 cons c_2 0.547 0.020
+11 1 cons c_3 0.860 0.031
+11 1 cons c_4 0.561 0.019
+11 1 cons c_5 0.748 0.019
+11 1 cons c_6 0.707 0.023
+11 1 cons c_7 0.802 0.022
+11 1 cons c_8 0.746 0.022
+11 1 cons c_9 0.625 0.019
+11 1 extra e_1 1.000 0.0000000001000
+11 1 extra e_2 0.591 0.016
+11 1 extra e_3 0.819 0.014
+11 1 extra e_4 0.916 0.012
+11 1 extra e_5 0.745 0.011
+11 1 extra e_6 0.745 0.015
+11 1 extra e_7 0.737 0.013
+11 1 extra e_8 0.847 0.010
+11 1 agree a_1 1.000 0.0000000001000
+11 1 agree a_2 0.673 0.028
+11 1 agree a_3 0.572 0.026
+11 1 agree a_4 0.678 0.019
+11 1 agree a_5 0.530 0.024
+11 1 agree a_6 0.656 0.019
+11 1 agree a_7 0.809 0.025
+11 1 agree a_8 0.660 0.018
+11 1 agree a_9 0.711 0.026
+11 1 neuro n_1 1.000 0.0000000001000
+11 1 neuro n_2 0.830 0.011
+11 1 neuro n_3 0.653 0.016
+11 1 neuro n_4 0.695 0.013
+11 1 neuro n_5 0.757 0.014
+11 1 neuro n_6 0.704 0.014
+11 1 neuro n_7 0.814 0.013
+11 1 neuro n_8 0.758 0.013
+12 1 cons open 0.378 0.020
+12 1 extra open 0.463 0.015
+12 1 extra cons 0.285 0.016
+12 1 agree open 0.274 0.020
+12 1 agree cons 0.440 0.017
+12 1 agree extra 0.199 0.017
+12 1 neuro open -0.236 0.017
+12 1 neuro cons -0.482 0.015
+12 1 neuro extra -0.376 0.015
+12 1 neuro agree -0.465 0.014
+15 1 open 1.000 0.0000000001000
+15 1 cons 1.000 0.0000000001000
+15 1 extra 1.000 0.0000000001000
+15 1 agree 1.000 0.0000000001000
+15 1 neuro 1.000 0.0000000001000
+21 1 open o_1 1.000 0.0000000001000
+21 1 open o_2 0.821 0.022
+21 1 open o_3 0.752 0.018
+21 1 open o_4 0.766 0.018
+21 1 open o_5 0.854 0.012
+21 1 open o_6 0.684 0.020
+21 1 open o_7 0.250 0.026
+21 1 open o_8 0.784 0.019
+21 1 open o_9 0.219 0.024
+21 1 open o_10 0.569 0.018
+21 1 cons c_1 1.000 0.0000000001000
+21 1 cons c_2 0.547 0.020
+21 1 cons c_3 0.860 0.031
+21 1 cons c_4 0.561 0.019
+21 1 cons c_5 0.748 0.019
+21 1 cons c_6 0.707 0.023
+21 1 cons c_7 0.802 0.022
+21 1 cons c_8 0.746 0.022
+21 1 cons c_9 0.625 0.019
+21 1 extra e_1 1.000 0.0000000001000
+21 1 extra e_2 0.591 0.016
+21 1 extra e_3 0.819 0.014
+21 1 extra e_4 0.916 0.012
+21 1 extra e_5 0.745 0.011
+21 1 extra e_6 0.745 0.015
+21 1 extra e_7 0.737 0.013
+21 1 extra e_8 0.847 0.010
+21 1 agree a_1 1.000 0.0000000001000
+21 1 agree a_2 0.673 0.028
+21 1 agree a_3 0.572 0.026
+21 1 agree a_4 0.678 0.019
+21 1 agree a_5 0.530 0.024
+21 1 agree a_6 0.656 0.019
+21 1 agree a_7 0.809 0.025
+21 1 agree a_8 0.660 0.018
+21 1 agree a_9 0.711 0.026
+21 1 neuro n_1 1.000 0.0000000001000
+21 1 neuro n_2 0.830 0.011
+21 1 neuro n_3 0.653 0.016
+21 1 neuro n_4 0.695 0.013
+21 1 neuro n_5 0.757 0.014
+21 1 neuro n_6 0.704 0.014
+21 1 neuro n_7 0.814 0.013
+21 1 neuro n_8 0.758 0.013
+22 1 cons open 0.378 0.020
+22 1 extra open 0.463 0.015
+22 1 extra cons 0.285 0.016
+22 1 agree open 0.274 0.020
+22 1 agree cons 0.440 0.017
+22 1 agree extra 0.199 0.017
+22 1 neuro open -0.236 0.017
+22 1 neuro cons -0.482 0.015
+22 1 neuro extra -0.376 0.015
+22 1 neuro agree -0.465 0.014
+25 1 open 1.000 0.0000000001000
+25 1 cons 1.000 0.0000000001000
+25 1 extra 1.000 0.0000000001000
+25 1 agree 1.000 0.0000000001000
+25 1 neuro 1.000 0.0000000001000
+31 1 open o_1 1.000 0.0000000001000
+31 1 open o_2 0.821 0.022
+31 1 open o_3 0.752 0.018
+31 1 open o_4 0.766 0.018
+31 1 open o_5 0.854 0.012
+31 1 open o_6 0.684 0.020
+31 1 open o_7 0.250 0.026
+31 1 open o_8 0.784 0.019
+31 1 open o_9 0.219 0.024
+31 1 open o_10 0.569 0.018
+31 1 cons c_1 1.000 0.0000000001000
+31 1 cons c_2 0.547 0.020
+31 1 cons c_3 0.860 0.031
+31 1 cons c_4 0.561 0.019
+31 1 cons c_5 0.748 0.019
+31 1 cons c_6 0.707 0.023
+31 1 cons c_7 0.802 0.022
+31 1 cons c_8 0.746 0.022
+31 1 cons c_9 0.625 0.019
+31 1 extra e_1 1.000 0.0000000001000
+31 1 extra e_2 0.591 0.016
+31 1 extra e_3 0.819 0.014
+31 1 extra e_4 0.916 0.012
+31 1 extra e_5 0.745 0.011
+31 1 extra e_6 0.745 0.015
+31 1 extra e_7 0.737 0.013
+31 1 extra e_8 0.847 0.010
+31 1 agree a_1 1.000 0.0000000001000
+31 1 agree a_2 0.673 0.028
+31 1 agree a_3 0.572 0.026
+31 1 agree a_4 0.678 0.019
+31 1 agree a_5 0.530 0.024
+31 1 agree a_6 0.656 0.019
+31 1 agree a_7 0.809 0.025
+31 1 agree a_8 0.660 0.018
+31 1 agree a_9 0.711 0.026
+31 1 neuro n_1 1.000 0.0000000001000
+31 1 neuro n_2 0.830 0.011
+31 1 neuro n_3 0.653 0.016
+31 1 neuro n_4 0.695 0.013
+31 1 neuro n_5 0.757 0.014
+31 1 neuro n_6 0.704 0.014
+31 1 neuro n_7 0.814 0.013
+31 1 neuro n_8 0.758 0.013
+32 1 cons open 0.378 0.020
+32 1 extra open 0.463 0.015
+32 1 extra cons 0.285 0.016
+32 1 agree open 0.274 0.020
+32 1 agree cons 0.440 0.017
+32 1 agree extra 0.199 0.017
+32 1 neuro open -0.236 0.017
+32 1 neuro cons -0.482 0.015
+32 1 neuro extra -0.376 0.015
+32 1 neuro agree -0.465 0.014
+35 1 open 1.000 0.0000000001000
+35 1 cons 1.000 0.0000000001000
+35 1 extra 1.000 0.0000000001000
+35 1 agree 1.000 0.0000000001000
+35 1 neuro 1.000 0.0000000001000

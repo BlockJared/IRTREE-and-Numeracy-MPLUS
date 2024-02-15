@@ -1,0 +1,162 @@
+TITLE:    IR-TREE MODEL 5 ERS MRS ONS OCEAN with Cross Loadings
+
+DATA:     FILE = IRTREE.dat;
+
+VARIABLE: NAMES =
+!MRS
+ em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44 
+
+!Low vs High
+        e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+
+
+!ERS
+        eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 
+    aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+
+!ONS
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189
+;
+
+MISSING = .;
+
+usevariables =
+!MRS
+ em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44 
+
+!Low vs High
+        e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+
+
+!ERS
+        eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 
+    aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+
+!ONS
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189;
+
+categorical = 
+ em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44 
+
+!Low vs High
+        e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+
+
+!ERS
+        eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 
+    aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+
+!ONS
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189;
+DEFINE:
+
+ANALYSIS: 
+estimator = ML;
+coverage = .001;
+
+MODEL:
+
+!Model 1 MRS ERS ONS
+open by o_1@1 o_2 o_3 O_4 o_5 o_6 o_7 o_8 o_9 o_10 
+oex93 oex98 oex103 oex108 oex113 oex118 
+oex123 oex128 oex129 oex132 oex137 oex142 oex147 oex152 
+oex157 oex162 oex167 oex172 oex173 oex176;
+
+cons by c_1@1 c_2 c_3 c_4 c_5 c_6 c_7 c_8 c_9
+ cex91 cex96 cex101 cex106 cex111 cex116 cex121 
+cex126 cex131 cex135 cex140 cex145 cex150 cex155 cex160 cex165 
+cex170 cex175;
+
+extra by e_1@1 e_2 e_3 e_4 e_5 e_6 e_7 e_8 eex89 eex94
+ eex99 eex104 eex109 eex114 eex119 
+eex124 eex133 eex138 eex143 eex148 eex153 eex158 eex163 eex168;
+
+agree by a_1@1 a_2 a_3 a_4 a_5 a_6 a_7 a_8 a_9 
+aex90 aex95 aex100 aex105 aex110 aex115 
+aex120 aex125 aex130 aex134 aex139 aex144 aex149
+aex154 aex159 aex164 aex169 aex174;
+
+neuro by n_1@1 n_2 n_3 n_4 n_5 n_6 n_7 n_8  
+nex92 nex97 nex102 nex107 nex112 nex117 nex122 
+ nex127 nex136 nex141 nex146 nex151 nex156 
+nex161 nex166 nex171;
+          
+
+mrs by em1@1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44 ;
+          
+ers by eex89@-1 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 
+    aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176;
+
+ons by ons177@1 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189;
+
+         !LV means in Alpha (A)
+         ![mrs@0]; [ers@0]; [ons@0];[open@0]; [cons@0]; [extra@0]; [agree@0]; [neuro@0];
+
+         !LV variances and covariances in Psi (P)
+          !ers@1 ;  mrs@1 ;  ons@1 ; open@1 ;  cons@1 ; extra@1; agree@1 ; neuro@1;
+
+          ers with mrs ons open cons extra agree neuro;
+          mrs with ons open cons extra agree neuro;
+          ons with open cons extra agree neuro;
+          open with cons extra agree neuro;
+          cons with extra agree neuro;
+          extra with agree neuro;
+          agree with neuro;
+
+
+MODEL CONSTRAINT:
+
+OUTPUT: sampstat  tech1  modindices(5)  standardized;
+
+!Uncorrelate MRS and ERS with OCEAN
+!Get rid of Midpoint from factors

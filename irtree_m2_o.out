@@ -1,0 +1,892 @@
+Mplus VERSION 8.8
+MUTHEN & MUTHEN
+02/12/2024   2:45 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:    IR-TREE MODEL 2 ONS
+
+  DATA:     FILE = IRTREE_X.csv;
+
+  VARIABLE: NAMES =
+  !MRS
+            em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+            cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+            nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+            om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+
+  !Low vs High
+          e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+          e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+          e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+
+
+  !ERS
+          eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+      eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+      eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+      eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+      oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+      aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+      aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+      aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+      aex169 cex170 nex171 oex172 oex173 aex174 cex174 oex176
+
+  !ONS
+            ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+            ons186 ons187 ons188 ons189
+  ;
+
+  MISSING = .;
+
+  USEVARIABLES =
+
+  !ONS
+            ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+            ons186 ons187 ons188 ons189
+            ;
+
+  CATEGORICAL =
+            ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+            ons186 ons187 ons188 ons189
+            ;
+
+  DEFINE:
+
+
+  ANALYSIS:
+
+  estimator = ML;
+  coverage = .001;
+
+  MODEL:
+
+  !Model 2 ONS
+
+
+  ons by ons177@1 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+            ons186 ons187 ons188 ons189;
+
+           !LV means in Alpha (A)
+           ![ons@0];
+
+           !LV variances and covariances in Psi (P)
+            !ons@1 ;
+
+
+  MODEL CONSTRAINT:
+
+  OUTPUT: sampstat  tech1  modindices(5)  standardized;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+IR-TREE MODEL 2 ONS
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        5757
+
+Number of dependent variables                                   13
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   ONS177      ONS178      ONS179      ONS180      ONS181      ONS182
+   ONS183      ONS184      ONS185      ONS186      ONS187      ONS188
+   ONS189
+
+Continuous latent variables
+   ONS
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  IRTREE_X.csv
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.001
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+ ONS177         1.000
+ ONS178         1.000         1.000
+ ONS179         1.000         1.000         1.000
+ ONS180         1.000         1.000         1.000         1.000
+ ONS181         1.000         1.000         1.000         1.000         1.000
+ ONS182         1.000         1.000         1.000         1.000         1.000
+ ONS183         1.000         1.000         1.000         1.000         1.000
+ ONS184         1.000         1.000         1.000         1.000         1.000
+ ONS185         1.000         1.000         1.000         1.000         1.000
+ ONS186         1.000         1.000         1.000         1.000         1.000
+ ONS187         1.000         1.000         1.000         1.000         1.000
+ ONS188         1.000         1.000         1.000         1.000         1.000
+ ONS189         1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+ ONS182         1.000
+ ONS183         1.000         1.000
+ ONS184         1.000         1.000         1.000
+ ONS185         1.000         1.000         1.000         1.000
+ ONS186         1.000         1.000         1.000         1.000         1.000
+ ONS187         1.000         1.000         1.000         1.000         1.000
+ ONS188         1.000         1.000         1.000         1.000         1.000
+ ONS189         1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+ ONS187         1.000
+ ONS188         1.000         1.000
+ ONS189         1.000         1.000         1.000
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS
+
+
+           Means
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+                0.641         0.627         0.243         0.805         0.770
+
+
+           Means
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+                0.422         0.083         0.021         0.239         0.341
+
+
+           Means
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+                0.144         0.312         0.424
+
+
+           Covariances
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+ ONS177         0.230
+ ONS178         0.059         0.234
+ ONS179         0.052         0.064         0.184
+ ONS180         0.044         0.042         0.035         0.157
+ ONS181         0.056         0.055         0.046         0.044         0.177
+ ONS182         0.047         0.055         0.056         0.035         0.041
+ ONS183         0.018         0.018         0.028         0.010         0.014
+ ONS184         0.005         0.006         0.007         0.003         0.003
+ ONS185         0.055         0.065         0.089         0.038         0.046
+ ONS186         0.052         0.062         0.077         0.037         0.047
+ ONS187         0.035         0.039         0.060         0.022         0.027
+ ONS188         0.023         0.029         0.039         0.020         0.018
+ ONS189         0.044         0.053         0.064         0.033         0.037
+
+
+           Covariances
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+ ONS182         0.244
+ ONS183         0.036         0.076
+ ONS184         0.006         0.003         0.020
+ ONS185         0.058         0.027         0.009         0.182
+ ONS186         0.053         0.023         0.007         0.097         0.225
+ ONS187         0.035         0.023         0.007         0.068         0.058
+ ONS188         0.025         0.014         0.003         0.036         0.037
+ ONS189         0.046         0.017         0.005         0.079         0.070
+
+
+           Covariances
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+ ONS187         0.123
+ ONS188         0.030         0.215
+ ONS189         0.050         0.039         0.244
+
+
+           Correlations
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+ ONS177         1.000
+ ONS178         0.252         1.000
+ ONS179         0.255         0.311         1.000
+ ONS180         0.229         0.220         0.206         1.000
+ ONS181         0.277         0.273         0.254         0.265         1.000
+ ONS182         0.200         0.232         0.264         0.176         0.195
+ ONS183         0.134         0.132         0.233         0.095         0.120
+ ONS184         0.068         0.089         0.117         0.056         0.048
+ ONS185         0.268         0.313         0.485         0.223         0.257
+ ONS186         0.229         0.269         0.380         0.198         0.234
+ ONS187         0.207         0.230         0.396         0.158         0.182
+ ONS188         0.103         0.131         0.194         0.110         0.091
+ ONS189         0.185         0.223         0.300         0.169         0.177
+
+
+           Correlations
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+ ONS182         1.000
+ ONS183         0.268         1.000
+ ONS184         0.081         0.067         1.000
+ ONS185         0.273         0.233         0.150         1.000
+ ONS186         0.228         0.180         0.099         0.478         1.000
+ ONS187         0.205         0.237         0.146         0.456         0.348
+ ONS188         0.110         0.111         0.047         0.181         0.168
+ ONS189         0.187         0.126         0.078         0.373         0.300
+
+
+           Correlations
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+ ONS187         1.000
+ ONS188         0.182         1.000
+ ONS189         0.288         0.169         1.000
+
+
+     MAXIMUM LOG-LIKELIHOOD VALUE FOR THE UNRESTRICTED (H1) MODEL IS -30276.520
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     ONS177                0.641      -0.588       0.000   35.89%       0.000      1.000      1.000
+            5757.000       0.230      -1.654       1.000   64.11%       1.000      1.000
+     ONS178                0.627      -0.524       0.000   37.33%       0.000      1.000      1.000
+            5757.000       0.234      -1.725       1.000   62.67%       1.000      1.000
+     ONS179                0.243       1.198       0.000   75.70%       0.000      0.000      0.000
+            5757.000       0.184      -0.564       1.000   24.30%       0.000      1.000
+     ONS180                0.805      -1.538       0.000   19.52%       1.000      1.000      1.000
+            5757.000       0.157       0.364       1.000   80.48%       1.000      1.000
+     ONS181                0.770      -1.282       0.000   23.02%       0.000      1.000      1.000
+            5757.000       0.177      -0.356       1.000   76.98%       1.000      1.000
+     ONS182                0.422       0.315       0.000   57.77%       0.000      0.000      0.000
+            5757.000       0.244      -1.901       1.000   42.23%       1.000      1.000
+     ONS183                0.083       3.035       0.000   91.75%       0.000      0.000      0.000
+            5757.000       0.076       7.210       1.000    8.25%       0.000      0.000
+     ONS184                0.021       6.738       0.000   97.93%       0.000      0.000      0.000
+            5757.000       0.020      43.399       1.000    2.07%       0.000      0.000
+     ONS185                0.239       1.222       0.000   76.06%       0.000      0.000      0.000
+            5757.000       0.182      -0.508       1.000   23.94%       0.000      1.000
+     ONS186                0.341       0.672       0.000   65.92%       0.000      0.000      0.000
+            5757.000       0.225      -1.549       1.000   34.08%       0.000      1.000
+     ONS187                0.144       2.030       0.000   85.62%       0.000      0.000      0.000
+            5757.000       0.123       2.121       1.000   14.38%       0.000      0.000
+     ONS188                0.312       0.809       0.000   68.75%       0.000      0.000      0.000
+            5757.000       0.215      -1.345       1.000   31.25%       0.000      1.000
+     ONS189                0.424       0.308       0.000   57.60%       0.000      0.000      0.000
+            5757.000       0.244      -1.905       1.000   42.40%       1.000      1.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES MAY NOT BE
+     TRUSTWORTHY FOR SOME PARAMETERS DUE TO A NON-POSITIVE DEFINITE
+     FIRST-ORDER DERIVATIVE PRODUCT MATRIX.  THIS MAY BE DUE TO THE STARTING
+     VALUES BUT MAY ALSO BE AN INDICATION OF MODEL NONIDENTIFICATION.  THE
+     CONDITION NUMBER IS      -0.701D-18.  PROBLEM INVOLVING THE FOLLOWING PARAMETER:
+     Parameter 27, ONS178
+
+     THIS IS MOST LIKELY DUE TO VARIABLE ONS177 BEING DICHOTOMOUS BUT
+     DECLARED AS CONTINUOUS.
+
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       39
+
+Loglikelihood
+
+          H0 Value                      -30693.521
+          H1 Value                      -30276.520
+
+Information Criteria
+
+          Akaike (AIC)                   61465.043
+          Bayesian (BIC)                 61724.711
+          Sample-Size Adjusted BIC       61600.781
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            834.004
+          Degrees of Freedom                    65
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.045
+          90 Percent C.I.                    0.043  0.048
+          Probability RMSEA <= .05           0.997
+
+CFI/TLI
+
+          CFI                                0.934
+          TLI                                0.921
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          11788.511
+          Degrees of Freedom                    78
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.031
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ONS      BY
+    ONS177             1.000      0.000    999.000    999.000
+    ONS178             1.146      0.048     23.759      0.000
+    ONS179             1.403      0.052     27.010      0.000
+    ONS180             0.706      0.035     20.080      0.000
+    ONS181             0.864      0.039     22.063      0.000
+    ONS182             1.029      0.047     21.986      0.000
+    ONS183             0.473      0.024     19.320      0.000
+    ONS184             0.135      0.011     12.107      0.000
+    ONS185             1.563      0.056     27.799      0.000
+    ONS186             1.434      0.055     26.183      0.000
+    ONS187             1.023      0.040     25.698      0.000
+    ONS188             0.655      0.039     16.770      0.000
+    ONS189             1.200      0.051     23.721      0.000
+
+ Intercepts
+    ONS177             0.641      0.006    101.416      0.000
+    ONS178             0.627      0.006     98.313      0.000
+    ONS179             0.243      0.006     42.990      0.000
+    ONS180             0.805      0.005    154.044      0.000
+    ONS181             0.770      0.006    138.768      0.000
+    ONS182             0.422      0.007     64.868      0.000
+    ONS183             0.083      0.004     22.753      0.000
+    ONS184             0.021      0.002     11.023      0.000
+    ONS185             0.239      0.006     42.563      0.000
+    ONS186             0.341      0.006     54.556      0.000
+    ONS187             0.144      0.005     31.098      0.000
+    ONS188             0.312      0.006     51.154      0.000
+    ONS189             0.424      0.007     65.099      0.000
+
+ Variances
+    ONS                0.040      0.003     14.864      0.000
+
+ Residual Variances
+    ONS177             0.191      0.004     51.101      0.000
+    ONS178             0.182      0.004     50.157      0.000
+    ONS179             0.106      0.002     44.879      0.000
+    ONS180             0.137      0.003     51.888      0.000
+    ONS181             0.148      0.003     51.168      0.000
+    ONS182             0.202      0.004     51.127      0.000
+    ONS183             0.067      0.001     52.054      0.000
+    ONS184             0.020      0.000     53.213      0.000
+    ONS185             0.086      0.002     39.955      0.000
+    ONS186             0.143      0.003     46.863      0.000
+    ONS187             0.082      0.002     47.557      0.000
+    ONS188             0.198      0.004     52.631      0.000
+    ONS189             0.187      0.004     50.034      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.918E-05
+       (ratio of smallest to largest eigenvalue)
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ONS      BY
+    ONS177             0.414      0.012     33.317      0.000
+    ONS178             0.471      0.012     39.900      0.000
+    ONS179             0.650      0.009     69.541      0.000
+    ONS180             0.354      0.013     27.187      0.000
+    ONS181             0.408      0.013     32.557      0.000
+    ONS182             0.414      0.012     33.332      0.000
+    ONS183             0.342      0.013     26.089      0.000
+    ONS184             0.189      0.014     13.383      0.000
+    ONS185             0.728      0.008     88.708      0.000
+    ONS186             0.601      0.010     59.798      0.000
+    ONS187             0.580      0.010     55.849      0.000
+    ONS188             0.281      0.014     20.701      0.000
+    ONS189             0.482      0.012     41.502      0.000
+
+ Intercepts
+    ONS177             1.337      0.018     73.705      0.000
+    ONS178             1.296      0.018     72.488      0.000
+    ONS179             0.567      0.014     39.906      0.000
+    ONS180             2.030      0.023     88.048      0.000
+    ONS181             1.829      0.022     84.886      0.000
+    ONS182             0.855      0.015     55.512      0.000
+    ONS183             0.300      0.013     22.258      0.000
+    ONS184             0.145      0.013     10.966      0.000
+    ONS185             0.561      0.014     39.564      0.000
+    ONS186             0.719      0.015     48.631      0.000
+    ONS187             0.410      0.014     29.869      0.000
+    ONS188             0.674      0.015     46.175      0.000
+    ONS189             0.858      0.015     55.657      0.000
+
+ Variances
+    ONS                1.000      0.000    999.000    999.000
+
+ Residual Variances
+    ONS177             0.828      0.010     80.359      0.000
+    ONS178             0.778      0.011     69.973      0.000
+    ONS179             0.578      0.012     47.531      0.000
+    ONS180             0.875      0.009     94.880      0.000
+    ONS181             0.834      0.010     81.631      0.000
+    ONS182             0.828      0.010     80.493      0.000
+    ONS183             0.883      0.009     98.616      0.000
+    ONS184             0.964      0.005    180.995      0.000
+    ONS185             0.470      0.012     39.302      0.000
+    ONS186             0.638      0.012     52.759      0.000
+    ONS187             0.664      0.012     55.203      0.000
+    ONS188             0.921      0.008    120.928      0.000
+    ONS189             0.767      0.011     68.393      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ONS      BY
+    ONS177             0.414      0.012     33.317      0.000
+    ONS178             0.471      0.012     39.900      0.000
+    ONS179             0.650      0.009     69.541      0.000
+    ONS180             0.354      0.013     27.187      0.000
+    ONS181             0.408      0.013     32.557      0.000
+    ONS182             0.414      0.012     33.332      0.000
+    ONS183             0.342      0.013     26.089      0.000
+    ONS184             0.189      0.014     13.383      0.000
+    ONS185             0.728      0.008     88.708      0.000
+    ONS186             0.601      0.010     59.798      0.000
+    ONS187             0.580      0.010     55.849      0.000
+    ONS188             0.281      0.014     20.701      0.000
+    ONS189             0.482      0.012     41.502      0.000
+
+ Intercepts
+    ONS177             1.337      0.018     73.705      0.000
+    ONS178             1.296      0.018     72.488      0.000
+    ONS179             0.567      0.014     39.906      0.000
+    ONS180             2.030      0.023     88.048      0.000
+    ONS181             1.829      0.022     84.886      0.000
+    ONS182             0.855      0.015     55.512      0.000
+    ONS183             0.300      0.013     22.258      0.000
+    ONS184             0.145      0.013     10.966      0.000
+    ONS185             0.561      0.014     39.564      0.000
+    ONS186             0.719      0.015     48.631      0.000
+    ONS187             0.410      0.014     29.869      0.000
+    ONS188             0.674      0.015     46.175      0.000
+    ONS189             0.858      0.015     55.657      0.000
+
+ Variances
+    ONS                1.000      0.000    999.000    999.000
+
+ Residual Variances
+    ONS177             0.828      0.010     80.359      0.000
+    ONS178             0.778      0.011     69.973      0.000
+    ONS179             0.578      0.012     47.531      0.000
+    ONS180             0.875      0.009     94.880      0.000
+    ONS181             0.834      0.010     81.631      0.000
+    ONS182             0.828      0.010     80.493      0.000
+    ONS183             0.883      0.009     98.616      0.000
+    ONS184             0.964      0.005    180.995      0.000
+    ONS185             0.470      0.012     39.302      0.000
+    ONS186             0.638      0.012     52.759      0.000
+    ONS187             0.664      0.012     55.203      0.000
+    ONS188             0.921      0.008    120.928      0.000
+    ONS189             0.767      0.011     68.393      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ONS      BY
+    ONS177             0.199      0.007     29.727      0.000
+    ONS178             0.228      0.007     34.296      0.000
+    ONS179             0.279      0.006     50.382      0.000
+    ONS180             0.140      0.006     25.065      0.000
+    ONS181             0.172      0.006     29.172      0.000
+    ONS182             0.205      0.007     29.737      0.000
+    ONS183             0.094      0.004     24.186      0.000
+    ONS184             0.027      0.002     13.088      0.000
+    ONS185             0.311      0.005     58.169      0.000
+    ONS186             0.285      0.006     45.769      0.000
+    ONS187             0.203      0.005     43.735      0.000
+    ONS188             0.130      0.007     19.686      0.000
+    ONS189             0.238      0.007     35.340      0.000
+
+ Intercepts
+    ONS177             0.641      0.006    101.416      0.000
+    ONS178             0.627      0.006     98.313      0.000
+    ONS179             0.243      0.006     42.990      0.000
+    ONS180             0.805      0.005    154.044      0.000
+    ONS181             0.770      0.006    138.768      0.000
+    ONS182             0.422      0.007     64.868      0.000
+    ONS183             0.083      0.004     22.753      0.000
+    ONS184             0.021      0.002     11.023      0.000
+    ONS185             0.239      0.006     42.563      0.000
+    ONS186             0.341      0.006     54.556      0.000
+    ONS187             0.144      0.005     31.098      0.000
+    ONS188             0.312      0.006     51.154      0.000
+    ONS189             0.424      0.007     65.099      0.000
+
+ Variances
+    ONS                1.000      0.000    999.000    999.000
+
+ Residual Variances
+    ONS177             0.191      0.004     51.101      0.000
+    ONS178             0.182      0.004     50.157      0.000
+    ONS179             0.106      0.002     44.879      0.000
+    ONS180             0.137      0.003     51.888      0.000
+    ONS181             0.148      0.003     51.168      0.000
+    ONS182             0.202      0.004     51.127      0.000
+    ONS183             0.067      0.001     52.054      0.000
+    ONS184             0.020      0.000     53.213      0.000
+    ONS185             0.086      0.002     39.955      0.000
+    ONS186             0.143      0.003     46.863      0.000
+    ONS187             0.082      0.002     47.557      0.000
+    ONS188             0.198      0.004     52.631      0.000
+    ONS189             0.187      0.004     50.034      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    ONS177             0.172      0.010     16.659      0.000
+    ONS178             0.222      0.011     19.950      0.000
+    ONS179             0.422      0.012     34.771      0.000
+    ONS180             0.125      0.009     13.593      0.000
+    ONS181             0.166      0.010     16.278      0.000
+    ONS182             0.172      0.010     16.666      0.000
+    ONS183             0.117      0.009     13.044      0.000
+    ONS184             0.036      0.005      6.691      0.000
+    ONS185             0.530      0.012     44.354      0.000
+    ONS186             0.362      0.012     29.899      0.000
+    ONS187             0.336      0.012     27.924      0.000
+    ONS188             0.079      0.008     10.350      0.000
+    ONS189             0.233      0.011     20.751      0.000
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     5.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+ONS178   WITH ONS177              32.791     0.015      0.015        0.080
+ONS180   WITH ONS177              58.531     0.017      0.017        0.105
+ONS180   WITH ONS178              26.282     0.011      0.011        0.071
+ONS180   WITH ONS179               8.667    -0.005     -0.005       -0.044
+ONS181   WITH ONS177             108.362     0.024      0.024        0.144
+ONS181   WITH ONS178              64.784     0.018      0.018        0.113
+ONS181   WITH ONS180             124.254     0.022      0.022        0.153
+ONS182   WITH ONS177               7.719     0.008      0.008        0.039
+ONS182   WITH ONS178              13.428     0.010      0.010        0.051
+ONS182   WITH ONS180               7.579     0.006      0.006        0.038
+ONS182   WITH ONS181               6.324     0.006      0.006        0.035
+ONS183   WITH ONS178               7.665    -0.004     -0.004       -0.038
+ONS183   WITH ONS180               5.313    -0.003     -0.003       -0.031
+ONS183   WITH ONS182             135.757     0.019      0.019        0.160
+ONS184   WITH ONS181               6.561    -0.002     -0.002       -0.035
+ONS185   WITH ONS177              25.089    -0.010     -0.010       -0.080
+ONS185   WITH ONS178              22.263    -0.010     -0.010       -0.077
+ONS185   WITH ONS179               5.858     0.004      0.004        0.045
+ONS185   WITH ONS180              24.268    -0.008     -0.008       -0.078
+ONS185   WITH ONS181              33.612    -0.010     -0.010       -0.093
+ONS185   WITH ONS182              17.888    -0.009     -0.009       -0.068
+ONS185   WITH ONS183               5.118    -0.003     -0.003       -0.036
+ONS186   WITH ONS177               5.310    -0.006     -0.006       -0.034
+ONS186   WITH ONS182               5.849    -0.006     -0.006       -0.035
+ONS186   WITH ONS183               7.991    -0.004     -0.004       -0.041
+ONS186   WITH ONS185              54.615     0.014      0.014        0.130
+ONS187   WITH ONS177              14.255    -0.007     -0.007       -0.055
+ONS187   WITH ONS178              25.061    -0.009     -0.009       -0.073
+ONS187   WITH ONS179               7.837     0.004      0.004        0.045
+ONS187   WITH ONS180              25.814    -0.008     -0.008       -0.073
+ONS187   WITH ONS181              37.181    -0.010     -0.010       -0.088
+ONS187   WITH ONS182              15.648    -0.007     -0.007       -0.057
+ONS187   WITH ONS183              17.370     0.004      0.004        0.060
+ONS187   WITH ONS184              13.480     0.002      0.002        0.052
+ONS187   WITH ONS185              36.072     0.009      0.009        0.104
+ONS188   WITH ONS185               9.915    -0.006     -0.006       -0.049
+ONS189   WITH ONS183              14.334    -0.006     -0.006       -0.053
+ONS189   WITH ONS185              11.534     0.007      0.007        0.056
+ONS189   WITH ONS188              10.210     0.008      0.008        0.044
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+                  1             2             3             4             5
+
+
+           NU
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+                  6             7             8             9            10
+
+
+           NU
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+                 11            12            13
+
+
+           LAMBDA
+              ONS
+              ________
+ ONS177             0
+ ONS178            14
+ ONS179            15
+ ONS180            16
+ ONS181            17
+ ONS182            18
+ ONS183            19
+ ONS184            20
+ ONS185            21
+ ONS186            22
+ ONS187            23
+ ONS188            24
+ ONS189            25
+
+
+           THETA
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+ ONS177            26
+ ONS178             0            27
+ ONS179             0             0            28
+ ONS180             0             0             0            29
+ ONS181             0             0             0             0            30
+ ONS182             0             0             0             0             0
+ ONS183             0             0             0             0             0
+ ONS184             0             0             0             0             0
+ ONS185             0             0             0             0             0
+ ONS186             0             0             0             0             0
+ ONS187             0             0             0             0             0
+ ONS188             0             0             0             0             0
+ ONS189             0             0             0             0             0
+
+
+           THETA
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+ ONS182            31
+ ONS183             0            32
+ ONS184             0             0            33
+ ONS185             0             0             0            34
+ ONS186             0             0             0             0            35
+ ONS187             0             0             0             0             0
+ ONS188             0             0             0             0             0
+ ONS189             0             0             0             0             0
+
+
+           THETA
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+ ONS187            36
+ ONS188             0            37
+ ONS189             0             0            38
+
+
+           ALPHA
+              ONS
+              ________
+                  0
+
+
+           BETA
+              ONS
+              ________
+ ONS                0
+
+
+           PSI
+              ONS
+              ________
+ ONS               39
+
+
+     STARTING VALUES
+
+
+           NU
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+                0.641         0.627         0.243         0.805         0.770
+
+
+           NU
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+                0.422         0.083         0.021         0.239         0.341
+
+
+           NU
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+                0.144         0.312         0.424
+
+
+           LAMBDA
+              ONS
+              ________
+ ONS177         1.000
+ ONS178         1.092
+ ONS179         1.156
+ ONS180         0.726
+ ONS181         0.903
+ ONS182         0.936
+ ONS183         0.395
+ ONS184         0.106
+ ONS185         1.246
+ ONS186         1.176
+ ONS187         0.797
+ ONS188         0.542
+ ONS189         0.986
+
+
+           THETA
+              ONS177        ONS178        ONS179        ONS180        ONS181
+              ________      ________      ________      ________      ________
+ ONS177         0.115
+ ONS178         0.000         0.117
+ ONS179         0.000         0.000         0.092
+ ONS180         0.000         0.000         0.000         0.079
+ ONS181         0.000         0.000         0.000         0.000         0.089
+ ONS182         0.000         0.000         0.000         0.000         0.000
+ ONS183         0.000         0.000         0.000         0.000         0.000
+ ONS184         0.000         0.000         0.000         0.000         0.000
+ ONS185         0.000         0.000         0.000         0.000         0.000
+ ONS186         0.000         0.000         0.000         0.000         0.000
+ ONS187         0.000         0.000         0.000         0.000         0.000
+ ONS188         0.000         0.000         0.000         0.000         0.000
+ ONS189         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              ONS182        ONS183        ONS184        ONS185        ONS186
+              ________      ________      ________      ________      ________
+ ONS182         0.122
+ ONS183         0.000         0.038
+ ONS184         0.000         0.000         0.010
+ ONS185         0.000         0.000         0.000         0.091
+ ONS186         0.000         0.000         0.000         0.000         0.112
+ ONS187         0.000         0.000         0.000         0.000         0.000
+ ONS188         0.000         0.000         0.000         0.000         0.000
+ ONS189         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              ONS187        ONS188        ONS189
+              ________      ________      ________
+ ONS187         0.062
+ ONS188         0.000         0.107
+ ONS189         0.000         0.000         0.122
+
+
+           ALPHA
+              ONS
+              ________
+                0.000
+
+
+           BETA
+              ONS
+              ________
+ ONS            0.000
+
+
+           PSI
+              ONS
+              ________
+ ONS            0.050
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\jbloc\desktop\irtree mplus\irtree_m2_o.dgm
+
+     Beginning Time:  14:45:49
+        Ending Time:  14:45:50
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2022 Muthen & Muthen

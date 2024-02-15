@@ -1,0 +1,713 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+    IR-TREE MODEL 1 ERS MRS ONS
+
+DATA:
+     FILE = IRTREE.dat;
+VARIABLE:
+ NAMES =
+          em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+        e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+        e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+        e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+        eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+    aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189
+;
+MISSING = .;
+usevariables =
+          em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+        eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+    aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+          ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189
+          ;
+categorical =
+          em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+        cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+         om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+       eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+   eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+   eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+   eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+   oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+   aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+   aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+  aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+  aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+         ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189
+          ;
+ANALYSIS:
+estimator = ML;
+coverage = .001;
+OUTPUT:
+ sampstat  tech1  modindices(5)  standardized;
+MODEL:
+mrs by em1@1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+          cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+          nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+          om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44;
+ers by eex89@-1 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+    eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+    eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+    eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+    oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+    aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+    aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+    aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+    aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176;
+ons by ons177@1 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+          ons186 ons187 ons188 ons189;
+          ers with mrs ons;
+          mrs with ons;
+INPUT_END
+2
+2
+2
+2
+ML
+1
+GENERAL
+0
+145
+3
+0
+em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23 nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44 eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128 oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176 ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185 ons186 ons187 ons188 ons189 mrs ers ons
+1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 0 0
+0
+3
+mrs
+em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23 nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+ers
+eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128 oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+ons
+ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185 ons186 ons187 ons188 ons189
+1 1 mrs em1    1.000    0.000
+1 1 mrs am2    0.763    0.062
+1 1 mrs cm3    1.220    0.106
+1 1 mrs nm4    0.793    0.068
+1 1 mrs om5    1.243    0.092
+1 1 mrs em6    0.921    0.071
+1 1 mrs am7    1.409    0.110
+1 1 mrs cm8    0.965    0.075
+1 1 mrs nm9    1.137    0.086
+1 1 mrs om10    1.314    0.103
+1 1 mrs em11    1.198    0.085
+1 1 mrs am12    0.787    0.071
+1 1 mrs cm13    1.577    0.141
+1 1 mrs nm14    0.925    0.071
+1 1 mrs om15    1.252    0.090
+1 1 mrs em16    1.263    0.088
+1 1 mrs am17    1.277    0.099
+1 1 mrs cm18    1.133    0.088
+1 1 mrs nm19    0.887    0.070
+1 1 mrs om20    1.231    0.090
+1 1 mrs em21    0.954    0.074
+1 1 mrs am22    1.152    0.094
+1 1 mrs cm23    1.135    0.087
+1 1 mrs nm24    1.358    0.098
+1 1 mrs om25    1.269    0.091
+1 1 mrs em26    1.306    0.093
+1 1 mrs am27    1.085    0.081
+1 1 mrs cm28    1.534    0.115
+1 1 mrs nm29    1.108    0.083
+1 1 mrs om30    1.340    0.096
+1 1 mrs em31    1.044    0.079
+1 1 mrs am32    1.601    0.124
+1 1 mrs cm33    1.683    0.130
+1 1 mrs nm34    1.492    0.109
+1 1 mrs om35    0.783    0.063
+1 1 mrs em36    1.258    0.091
+1 1 mrs am37    1.052    0.083
+1 1 mrs cm38    1.544    0.113
+1 1 mrs nm39    1.087    0.080
+1 1 mrs om40    1.471    0.104
+1 1 mrs om41    1.148    0.084
+1 1 mrs am42    1.381    0.106
+1 1 mrs cm43    1.120    0.083
+1 1 mrs om44    0.714    0.059
+1 1 ers eex89   -1.000    0.000
+1 1 ers aex90   -0.957    0.130
+1 1 ers cex91   -1.062    0.217
+1 1 ers nex92   -0.794    0.088
+1 1 ers oex93   -1.223    0.202
+1 1 ers eex94   -1.085    0.114
+1 1 ers aex95   -1.285    0.242
+1 1 ers cex96   -1.071    0.150
+1 1 ers nex97   -1.554    0.154
+1 1 ers oex98   -1.614    0.292
+1 1 ers eex99   -0.945    0.139
+1 1 ers aex100   -1.750    0.287
+1 1 ers cex101   -1.256    0.361
+1 1 ers nex102   -1.796    0.196
+1 1 ers oex103   -1.419    0.219
+1 1 ers eex104   -1.604    0.238
+1 1 ers aex105   -1.355    0.205
+1 1 ers cex106   -0.852    0.115
+1 1 ers nex107   -1.407    0.151
+1 1 ers oex108   -1.870    0.264
+1 1 ers eex109   -0.950    0.103
+1 1 ers aex110   -1.061    0.176
+1 1 ers cex111   -1.171    0.167
+1 1 ers nex112   -1.506    0.147
+1 1 ers oex113   -1.495    0.197
+1 1 ers eex114   -1.379    0.181
+1 1 ers aex115   -1.335    0.164
+1 1 ers cex116   -1.834    0.315
+1 1 ers nex117   -1.605    0.169
+1 1 ers oex118   -1.488    0.209
+1 1 ers eex119   -1.128    0.123
+1 1 ers aex120   -1.193    0.277
+1 1 ers cex121   -1.958    0.387
+1 1 ers nex122   -1.631    0.157
+1 1 ers oex123   -1.362    0.140
+1 1 ers eex124   -1.176    0.156
+1 1 ers aex125   -1.345    0.190
+1 1 ers cex126   -1.597    0.280
+1 1 ers nex127   -1.768    0.177
+1 1 ers oex128   -1.754    0.281
+1 1 ers oex129   -1.139    0.127
+1 1 ers aex130   -1.763    0.328
+1 1 ers cex131   -0.841    0.111
+1 1 ers oex132   -0.741    0.092
+1 1 ers eex133    0.965    0.102
+1 1 ers aex134    0.989    0.107
+1 1 ers cex135    1.312    0.127
+1 1 ers nex136    0.798    0.138
+1 1 ers oex137    1.611    0.155
+1 1 ers eex138    1.431    0.163
+1 1 ers aex139    1.584    0.151
+1 1 ers cex140    1.251    0.126
+1 1 ers nex141    0.963    0.125
+1 1 ers oex142    1.304    0.126
+1 1 ers eex143    1.693    0.167
+1 1 ers aex144    0.984    0.101
+1 1 ers cex145    1.436    0.143
+1 1 ers nex146    0.979    0.109
+1 1 ers oex147    1.492    0.146
+1 1 ers eex148    1.851    0.180
+1 1 ers aex149    1.370    0.133
+1 1 ers cex150    1.277    0.129
+1 1 ers nex151    0.735    0.088
+1 1 ers oex152    1.360    0.133
+1 1 ers eex153    1.436    0.154
+1 1 ers aex154    1.306    0.126
+1 1 ers cex155    1.444    0.142
+1 1 ers nex156    1.309    0.177
+1 1 ers oex157    1.859    0.181
+1 1 ers eex158    1.742    0.170
+1 1 ers aex159    1.507    0.150
+1 1 ers cex160    1.748    0.166
+1 1 ers nex161    0.982    0.111
+1 1 ers oex162    1.320    0.130
+1 1 ers eex163    1.753    0.182
+1 1 ers aex164    1.726    0.164
+1 1 ers cex165    1.840    0.174
+1 1 ers nex166    1.463    0.214
+1 1 ers oex167    1.041    0.122
+1 1 ers eex168    1.542    0.151
+1 1 ers aex169    1.368    0.135
+1 1 ers cex170    1.703    0.163
+1 1 ers nex171    1.034    0.124
+1 1 ers oex172    1.662    0.160
+1 1 ers oex173    1.291    0.135
+1 1 ers aex174    1.798    0.171
+1 1 ers cex175    1.845    0.184
+1 1 ers oex176    1.067    0.120
+1 1 ons ons177    1.000    0.000
+1 1 ons ons178    1.183    0.065
+1 1 ons ons179    1.935    0.107
+1 1 ons ons180    1.121    0.067
+1 1 ons ons181    1.329    0.077
+1 1 ons ons182    0.823    0.046
+1 1 ons ons183    1.077    0.071
+1 1 ons ons184    1.029    0.103
+1 1 ons ons185    2.883    0.182
+1 1 ons ons186    1.449    0.077
+1 1 ons ons187    1.941    0.115
+1 1 ons ons188    0.506    0.035
+1 1 ons ons189    0.962    0.053
+2 1 ers mrs   -0.342    0.037
+2 1 ers ons   -0.239    0.028
+2 1 mrs ons   -0.012    0.018
+5 1 mrs    0.793    0.090
+5 1 ers    0.698    0.122
+5 1 ons    1.531    0.123
+11 1 mrs em1    0.441    0.020
+11 1 mrs am2    0.351    0.018
+11 1 mrs cm3    0.514    0.026
+11 1 mrs nm4    0.363    0.021
+11 1 mrs om5    0.521    0.019
+11 1 mrs em6    0.412    0.019
+11 1 mrs am7    0.569    0.022
+11 1 mrs cm8    0.428    0.019
+11 1 mrs nm9    0.487    0.019
+11 1 mrs om10    0.542    0.022
+11 1 mrs em11    0.507    0.017
+11 1 mrs am12    0.360    0.022
+11 1 mrs cm13    0.612    0.027
+11 1 mrs nm14    0.413    0.019
+11 1 mrs om15    0.523    0.017
+11 1 mrs em16    0.527    0.017
+11 1 mrs am17    0.531    0.021
+11 1 mrs cm18    0.486    0.020
+11 1 mrs nm19    0.399    0.019
+11 1 mrs om20    0.517    0.018
+11 1 mrs em21    0.424    0.020
+11 1 mrs am22    0.492    0.023
+11 1 mrs cm23    0.487    0.020
+11 1 mrs nm24    0.555    0.018
+11 1 mrs om25    0.529    0.017
+11 1 mrs em26    0.540    0.018
+11 1 mrs am27    0.470    0.019
+11 1 mrs cm28    0.602    0.019
+11 1 mrs nm29    0.478    0.019
+11 1 mrs om30    0.550    0.017
+11 1 mrs em31    0.456    0.019
+11 1 mrs am32    0.618    0.021
+11 1 mrs cm33    0.637    0.020
+11 1 mrs nm34    0.591    0.019
+11 1 mrs om35    0.359    0.019
+11 1 mrs em36    0.525    0.019
+11 1 mrs am37    0.459    0.020
+11 1 mrs cm38    0.604    0.019
+11 1 mrs nm39    0.471    0.018
+11 1 mrs om40    0.585    0.017
+11 1 mrs om41    0.491    0.018
+11 1 mrs am42    0.561    0.021
+11 1 mrs cm43    0.482    0.019
+11 1 mrs om44    0.331    0.018
+11 1 ers eex89   -0.418    0.030
+11 1 ers aex90   -0.403    0.035
+11 1 ers cex91   -0.439    0.066
+11 1 ers nex92   -0.343    0.021
+11 1 ers oex93   -0.491    0.053
+11 1 ers eex94   -0.447    0.022
+11 1 ers aex95   -0.509    0.063
+11 1 ers cex96   -0.443    0.039
+11 1 ers nex97   -0.582    0.018
+11 1 ers oex98   -0.597    0.061
+11 1 ers eex99   -0.399    0.040
+11 1 ers aex100   -0.627    0.053
+11 1 ers cex101   -0.501    0.103
+11 1 ers nex102   -0.637    0.025
+11 1 ers oex103   -0.547    0.049
+11 1 ers eex104   -0.594    0.047
+11 1 ers aex105   -0.530    0.047
+11 1 ers cex106   -0.365    0.033
+11 1 ers nex107   -0.544    0.024
+11 1 ers oex108   -0.653    0.042
+11 1 ers eex109   -0.401    0.023
+11 1 ers aex110   -0.439    0.050
+11 1 ers cex111   -0.475    0.042
+11 1 ers nex112   -0.570    0.017
+11 1 ers oex113   -0.567    0.039
+11 1 ers eex114   -0.536    0.038
+11 1 ers aex115   -0.524    0.033
+11 1 ers cex116   -0.645    0.056
+11 1 ers nex117   -0.595    0.023
+11 1 ers oex118   -0.565    0.042
+11 1 ers eex119   -0.461    0.025
+11 1 ers aex120   -0.482    0.080
+11 1 ers cex121   -0.670    0.066
+11 1 ers nex122   -0.601    0.016
+11 1 ers oex123   -0.531    0.021
+11 1 ers eex124   -0.476    0.038
+11 1 ers aex125   -0.527    0.042
+11 1 ers cex126   -0.593    0.059
+11 1 ers nex127   -0.631    0.019
+11 1 ers oex128   -0.628    0.052
+11 1 ers oex129   -0.465    0.026
+11 1 ers aex130   -0.630    0.063
+11 1 ers cex131   -0.361    0.031
+11 1 ers oex132   -0.323    0.026
+11 1 ers eex133    0.406    0.020
+11 1 ers aex134    0.415    0.022
+11 1 ers cex135    0.517    0.016
+11 1 ers nex136    0.345    0.046
+11 1 ers oex137    0.596    0.016
+11 1 ers eex138    0.550    0.028
+11 1 ers aex139    0.589    0.015
+11 1 ers cex140    0.499    0.019
+11 1 ers nex141    0.406    0.033
+11 1 ers oex142    0.515    0.016
+11 1 ers eex143    0.615    0.018
+11 1 ers aex144    0.413    0.019
+11 1 ers cex145    0.552    0.019
+11 1 ers nex146    0.411    0.024
+11 1 ers oex147    0.566    0.017
+11 1 ers eex148    0.649    0.017
+11 1 ers aex149    0.534    0.016
+11 1 ers cex150    0.507    0.019
+11 1 ers nex151    0.321    0.024
+11 1 ers oex152    0.531    0.017
+11 1 ers eex153    0.552    0.024
+11 1 ers aex154    0.516    0.016
+11 1 ers cex155    0.554    0.018
+11 1 ers nex156    0.516    0.039
+11 1 ers oex157    0.650    0.016
+11 1 ers eex158    0.626    0.017
+11 1 ers aex159    0.570    0.019
+11 1 ers cex160    0.627    0.015
+11 1 ers nex161    0.412    0.025
+11 1 ers oex162    0.520    0.018
+11 1 ers eex163    0.628    0.022
+11 1 ers aex164    0.622    0.015
+11 1 ers cex165    0.646    0.014
+11 1 ers nex166    0.559    0.045
+11 1 ers oex167    0.432    0.028
+11 1 ers eex168    0.579    0.018
+11 1 ers aex169    0.533    0.018
+11 1 ers cex170    0.617    0.015
+11 1 ers nex171    0.430    0.029
+11 1 ers oex172    0.608    0.016
+11 1 ers oex173    0.511    0.022
+11 1 ers aex174    0.638    0.014
+11 1 ers cex175    0.648    0.018
+11 1 ers oex176    0.441    0.025
+11 1 ons ons177    0.564    0.015
+11 1 ons ons178    0.628    0.015
+11 1 ons ons179    0.797    0.011
+11 1 ons ons180    0.608    0.018
+11 1 ons ons181    0.672    0.016
+11 1 ons ons182    0.489    0.015
+11 1 ons ons183    0.592    0.021
+11 1 ons ons184    0.575    0.035
+11 1 ons ons185    0.891    0.009
+11 1 ons ons186    0.703    0.013
+11 1 ons ons187    0.798    0.013
+11 1 ons ons188    0.327    0.017
+11 1 ons ons189    0.549    0.015
+12 1 ers mrs   -0.460    0.013
+12 1 ers ons   -0.231    0.015
+12 1 mrs ons   -0.011    0.017
+15 1 mrs    1.000    0.000
+15 1 ers    1.000    0.000
+15 1 ons    1.000    0.000
+21 1 mrs em1    0.441    0.020
+21 1 mrs am2    0.351    0.018
+21 1 mrs cm3    0.514    0.026
+21 1 mrs nm4    0.363    0.021
+21 1 mrs om5    0.521    0.019
+21 1 mrs em6    0.412    0.019
+21 1 mrs am7    0.569    0.022
+21 1 mrs cm8    0.428    0.019
+21 1 mrs nm9    0.487    0.019
+21 1 mrs om10    0.542    0.022
+21 1 mrs em11    0.507    0.017
+21 1 mrs am12    0.360    0.022
+21 1 mrs cm13    0.612    0.027
+21 1 mrs nm14    0.413    0.019
+21 1 mrs om15    0.523    0.017
+21 1 mrs em16    0.527    0.017
+21 1 mrs am17    0.531    0.021
+21 1 mrs cm18    0.486    0.020
+21 1 mrs nm19    0.399    0.019
+21 1 mrs om20    0.517    0.018
+21 1 mrs em21    0.424    0.020
+21 1 mrs am22    0.492    0.023
+21 1 mrs cm23    0.487    0.020
+21 1 mrs nm24    0.555    0.018
+21 1 mrs om25    0.529    0.017
+21 1 mrs em26    0.540    0.018
+21 1 mrs am27    0.470    0.019
+21 1 mrs cm28    0.602    0.019
+21 1 mrs nm29    0.478    0.019
+21 1 mrs om30    0.550    0.017
+21 1 mrs em31    0.456    0.019
+21 1 mrs am32    0.618    0.021
+21 1 mrs cm33    0.637    0.020
+21 1 mrs nm34    0.591    0.019
+21 1 mrs om35    0.359    0.019
+21 1 mrs em36    0.525    0.019
+21 1 mrs am37    0.459    0.020
+21 1 mrs cm38    0.604    0.019
+21 1 mrs nm39    0.471    0.018
+21 1 mrs om40    0.585    0.017
+21 1 mrs om41    0.491    0.018
+21 1 mrs am42    0.561    0.021
+21 1 mrs cm43    0.482    0.019
+21 1 mrs om44    0.331    0.018
+21 1 ers eex89   -0.418    0.030
+21 1 ers aex90   -0.403    0.035
+21 1 ers cex91   -0.439    0.066
+21 1 ers nex92   -0.343    0.021
+21 1 ers oex93   -0.491    0.053
+21 1 ers eex94   -0.447    0.022
+21 1 ers aex95   -0.509    0.063
+21 1 ers cex96   -0.443    0.039
+21 1 ers nex97   -0.582    0.018
+21 1 ers oex98   -0.597    0.061
+21 1 ers eex99   -0.399    0.040
+21 1 ers aex100   -0.627    0.053
+21 1 ers cex101   -0.501    0.103
+21 1 ers nex102   -0.637    0.025
+21 1 ers oex103   -0.547    0.049
+21 1 ers eex104   -0.594    0.047
+21 1 ers aex105   -0.530    0.047
+21 1 ers cex106   -0.365    0.033
+21 1 ers nex107   -0.544    0.024
+21 1 ers oex108   -0.653    0.042
+21 1 ers eex109   -0.401    0.023
+21 1 ers aex110   -0.439    0.050
+21 1 ers cex111   -0.475    0.042
+21 1 ers nex112   -0.570    0.017
+21 1 ers oex113   -0.567    0.039
+21 1 ers eex114   -0.536    0.038
+21 1 ers aex115   -0.524    0.033
+21 1 ers cex116   -0.645    0.056
+21 1 ers nex117   -0.595    0.023
+21 1 ers oex118   -0.565    0.042
+21 1 ers eex119   -0.461    0.025
+21 1 ers aex120   -0.482    0.080
+21 1 ers cex121   -0.670    0.066
+21 1 ers nex122   -0.601    0.016
+21 1 ers oex123   -0.531    0.021
+21 1 ers eex124   -0.476    0.038
+21 1 ers aex125   -0.527    0.042
+21 1 ers cex126   -0.593    0.059
+21 1 ers nex127   -0.631    0.019
+21 1 ers oex128   -0.628    0.052
+21 1 ers oex129   -0.465    0.026
+21 1 ers aex130   -0.630    0.063
+21 1 ers cex131   -0.361    0.031
+21 1 ers oex132   -0.323    0.026
+21 1 ers eex133    0.406    0.020
+21 1 ers aex134    0.415    0.022
+21 1 ers cex135    0.517    0.016
+21 1 ers nex136    0.345    0.046
+21 1 ers oex137    0.596    0.016
+21 1 ers eex138    0.550    0.028
+21 1 ers aex139    0.589    0.015
+21 1 ers cex140    0.499    0.019
+21 1 ers nex141    0.406    0.033
+21 1 ers oex142    0.515    0.016
+21 1 ers eex143    0.615    0.018
+21 1 ers aex144    0.413    0.019
+21 1 ers cex145    0.552    0.019
+21 1 ers nex146    0.411    0.024
+21 1 ers oex147    0.566    0.017
+21 1 ers eex148    0.649    0.017
+21 1 ers aex149    0.534    0.016
+21 1 ers cex150    0.507    0.019
+21 1 ers nex151    0.321    0.024
+21 1 ers oex152    0.531    0.017
+21 1 ers eex153    0.552    0.024
+21 1 ers aex154    0.516    0.016
+21 1 ers cex155    0.554    0.018
+21 1 ers nex156    0.516    0.039
+21 1 ers oex157    0.650    0.016
+21 1 ers eex158    0.626    0.017
+21 1 ers aex159    0.570    0.019
+21 1 ers cex160    0.627    0.015
+21 1 ers nex161    0.412    0.025
+21 1 ers oex162    0.520    0.018
+21 1 ers eex163    0.628    0.022
+21 1 ers aex164    0.622    0.015
+21 1 ers cex165    0.646    0.014
+21 1 ers nex166    0.559    0.045
+21 1 ers oex167    0.432    0.028
+21 1 ers eex168    0.579    0.018
+21 1 ers aex169    0.533    0.018
+21 1 ers cex170    0.617    0.015
+21 1 ers nex171    0.430    0.029
+21 1 ers oex172    0.608    0.016
+21 1 ers oex173    0.511    0.022
+21 1 ers aex174    0.638    0.014
+21 1 ers cex175    0.648    0.018
+21 1 ers oex176    0.441    0.025
+21 1 ons ons177    0.564    0.015
+21 1 ons ons178    0.628    0.015
+21 1 ons ons179    0.797    0.011
+21 1 ons ons180    0.608    0.018
+21 1 ons ons181    0.672    0.016
+21 1 ons ons182    0.489    0.015
+21 1 ons ons183    0.592    0.021
+21 1 ons ons184    0.575    0.035
+21 1 ons ons185    0.891    0.009
+21 1 ons ons186    0.703    0.013
+21 1 ons ons187    0.798    0.013
+21 1 ons ons188    0.327    0.017
+21 1 ons ons189    0.549    0.015
+22 1 ers mrs   -0.460    0.013
+22 1 ers ons   -0.231    0.015
+22 1 mrs ons   -0.011    0.017
+25 1 mrs    1.000    0.000
+25 1 ers    1.000    0.000
+25 1 ons    1.000    0.000
+31 1 mrs em1    0.890    0.050
+31 1 mrs am2    0.679    0.041
+31 1 mrs cm3    1.086    0.074
+31 1 mrs nm4    0.706    0.047
+31 1 mrs om5    1.107    0.055
+31 1 mrs em6    0.820    0.045
+31 1 mrs am7    1.255    0.070
+31 1 mrs cm8    0.859    0.048
+31 1 mrs nm9    1.012    0.053
+31 1 mrs om10    1.170    0.066
+31 1 mrs em11    1.067    0.049
+31 1 mrs am12    0.700    0.050
+31 1 mrs cm13    1.404    0.099
+31 1 mrs nm14    0.823    0.045
+31 1 mrs om15    1.114    0.051
+31 1 mrs em16    1.124    0.049
+31 1 mrs am17    1.137    0.062
+31 1 mrs cm18    1.008    0.055
+31 1 mrs nm19    0.790    0.045
+31 1 mrs om20    1.096    0.053
+31 1 mrs em21    0.849    0.048
+31 1 mrs am22    1.026    0.062
+31 1 mrs cm23    1.010    0.053
+31 1 mrs nm24    1.209    0.056
+31 1 mrs om25    1.130    0.052
+31 1 mrs em26    1.163    0.053
+31 1 mrs am27    0.966    0.049
+31 1 mrs cm28    1.366    0.069
+31 1 mrs nm29    0.986    0.051
+31 1 mrs om30    1.193    0.054
+31 1 mrs em31    0.929    0.049
+31 1 mrs am32    1.426    0.078
+31 1 mrs cm33    1.498    0.081
+31 1 mrs nm34    1.328    0.064
+31 1 mrs om35    0.697    0.041
+31 1 mrs em36    1.120    0.055
+31 1 mrs am37    0.936    0.053
+31 1 mrs cm38    1.375    0.067
+31 1 mrs nm39    0.968    0.048
+31 1 mrs om40    1.309    0.058
+31 1 mrs om41    1.022    0.050
+31 1 mrs am42    1.229    0.066
+31 1 mrs cm43    0.997    0.050
+31 1 mrs om44    0.635    0.039
+31 1 ers eex89   -0.835    0.073
+31 1 ers aex90   -0.800    0.084
+31 1 ers cex91   -0.887    0.165
+31 1 ers nex92   -0.663    0.046
+31 1 ers oex93   -1.022    0.145
+31 1 ers eex94   -0.907    0.056
+31 1 ers aex95   -1.073    0.180
+31 1 ers cex96   -0.895    0.098
+31 1 ers nex97   -1.299    0.062
+31 1 ers oex98   -1.348    0.215
+31 1 ers eex99   -0.790    0.095
+31 1 ers aex100   -1.462    0.203
+31 1 ers cex101   -1.049    0.288
+31 1 ers nex102   -1.500    0.100
+31 1 ers oex103   -1.185    0.152
+31 1 ers eex104   -1.340    0.163
+31 1 ers aex105   -1.132    0.141
+31 1 ers cex106   -0.712    0.074
+31 1 ers nex107   -1.176    0.074
+31 1 ers oex108   -1.562    0.175
+31 1 ers eex109   -0.793    0.054
+31 1 ers aex110   -0.886    0.126
+31 1 ers cex111   -0.978    0.111
+31 1 ers nex112   -1.259    0.057
+31 1 ers oex113   -1.249    0.125
+31 1 ers eex114   -1.152    0.115
+31 1 ers aex115   -1.116    0.097
+31 1 ers cex116   -1.532    0.227
+31 1 ers nex117   -1.341    0.080
+31 1 ers oex118   -1.243    0.137
+31 1 ers eex119   -0.943    0.064
+31 1 ers aex120   -0.997    0.215
+31 1 ers cex121   -1.636    0.290
+31 1 ers nex122   -1.362    0.057
+31 1 ers oex123   -1.137    0.064
+31 1 ers eex124   -0.983    0.101
+31 1 ers aex125   -1.123    0.125
+31 1 ers cex126   -1.335    0.204
+31 1 ers nex127   -1.477    0.074
+31 1 ers oex128   -1.465    0.199
+31 1 ers oex129   -0.952    0.067
+31 1 ers aex130   -1.473    0.243
+31 1 ers cex131   -0.703    0.070
+31 1 ers oex132   -0.619    0.055
+31 1 ers eex133    0.806    0.048
+31 1 ers aex134    0.827    0.054
+31 1 ers cex135    1.096    0.047
+31 1 ers nex136    0.667    0.100
+31 1 ers oex137    1.346    0.057
+31 1 ers eex138    1.196    0.089
+31 1 ers aex139    1.323    0.052
+31 1 ers cex140    1.045    0.054
+31 1 ers nex141    0.805    0.077
+31 1 ers oex142    1.089    0.046
+31 1 ers eex143    1.415    0.066
+31 1 ers aex144    0.822    0.045
+31 1 ers cex145    1.199    0.058
+31 1 ers nex146    0.818    0.057
+31 1 ers oex147    1.246    0.056
+31 1 ers eex148    1.547    0.068
+31 1 ers aex149    1.144    0.049
+31 1 ers cex150    1.067    0.055
+31 1 ers nex151    0.614    0.051
+31 1 ers oex152    1.136    0.051
+31 1 ers eex153    1.199    0.076
+31 1 ers aex154    1.091    0.047
+31 1 ers cex155    1.206    0.056
+31 1 ers nex156    1.094    0.114
+31 1 ers oex157    1.553    0.068
+31 1 ers eex158    1.455    0.066
+31 1 ers aex159    1.259    0.061
+31 1 ers cex160    1.460    0.057
+31 1 ers nex161    0.820    0.060
+31 1 ers oex162    1.103    0.052
+31 1 ers eex163    1.465    0.084
+31 1 ers aex164    1.442    0.055
+31 1 ers cex165    1.537    0.057
+31 1 ers nex166    1.222    0.145
+31 1 ers oex167    0.870    0.069
+31 1 ers eex168    1.288    0.059
+31 1 ers aex169    1.143    0.054
+31 1 ers cex170    1.423    0.056
+31 1 ers nex171    0.864    0.072
+31 1 ers oex172    1.389    0.058
+31 1 ers oex173    1.078    0.064
+31 1 ers aex174    1.502    0.057
+31 1 ers cex175    1.542    0.075
+31 1 ers oex176    0.891    0.063
+31 1 ons ons177    1.237    0.050
+31 1 ons ons178    1.464    0.057
+31 1 ons ons179    2.394    0.094
+31 1 ons ons180    1.387    0.064
+31 1 ons ons181    1.645    0.072
+31 1 ons ons182    1.018    0.042
+31 1 ons ons183    1.332    0.072
+31 1 ons ons184    1.274    0.117
+31 1 ons ons185    3.566    0.175
+31 1 ons ons186    1.792    0.065
+31 1 ons ons187    2.402    0.107
+31 1 ons ons188    0.627    0.036
+31 1 ons ons189    1.190    0.046
+32 1 ers mrs   -0.460    0.013
+32 1 ers ons   -0.231    0.015
+32 1 mrs ons   -0.011    0.017
+35 1 mrs    1.000    0.000
+35 1 ers    1.000    0.000
+35 1 ons    1.000    0.000

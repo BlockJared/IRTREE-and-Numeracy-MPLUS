@@ -1,0 +1,64 @@
+TITLE:    IR-TREE MODEL 1 Attempt 2 EMO
+
+DATA:     FILE = IRTREE.dat;
+
+VARIABLE: NAMES =
+!MRS
+ y1-y44
+
+!Low vs High
+y45-y88
+
+!ERS
+y89-y176
+
+!ONS
+y177-y189
+;
+
+MISSING = .;
+
+usevariables =
+!MRS
+y1-y44
+
+
+!ERS
+y89-y176
+
+!ONS 
+y177-y189
+;
+
+categorical = 
+!MRS
+y1-y44
+
+
+!ERS
+y89-y176
+
+!ONS 
+y177-y189;
+DEFINE:
+
+ANALYSIS: coverage = .001;
+
+MODEL:
+
+mrs by y1@1 y2-y44;
+
+ers by y89@-1 y90-y176;
+
+ons by y177@1 y178-y189;
+
+[mrs@0]; [ers@0]; [ons@0];
+
+mrs@1; ers@1; ons@1;
+
+ers with mrs ons;
+mrs with ons;
+
+MODEL CONSTRAINT:
+
+OUTPUT: sampstat  tech1  modindices(5)  standardized;
