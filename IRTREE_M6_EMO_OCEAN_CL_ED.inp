@@ -98,7 +98,8 @@ DEFINE:
 
 ANALYSIS: 
 estimator = ML;
-coverage = .001;
+integration = MONTECARLO(6000);
+coverage = .0001;
 
 MODEL:
 
@@ -147,16 +148,12 @@ ons by ons177@1 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
           ons186 ons187 ons188 ons189;
 
 !Regression of Education on ONS
-ONS on ed1 ed2 ed3 ed4 ed5 ed6 ed7;
+MRS on ed1 ed2 ed3 ed4 ed5 ed6 ed7 ons;
+ERS on ed1 ed2 ed3 ed4 ed5 ed6 ed7 ons;
 
-         !LV means in Alpha (A)
-         ![mrs@0]; [ers@0]; [ons@0];[open@0]; [cons@0]; [extra@0]; [agree@0]; [neuro@0];
 
-         !LV variances and covariances in Psi (P)
-          !ers@1 ;  mrs@1 ;  ons@1 ; open@1 ;  cons@1 ; extra@1; agree@1 ; neuro@1;
-
-          ers with mrs ons open cons extra agree neuro;
-          mrs with ons open cons extra agree neuro;
+          ers with mrs open cons extra agree neuro;
+          mrs with open cons extra agree neuro;
           ons with open cons extra agree neuro;
           open with cons extra agree neuro;
           cons with extra agree neuro;
@@ -166,4 +163,4 @@ ONS on ed1 ed2 ed3 ed4 ed5 ed6 ed7;
 
 MODEL CONSTRAINT:
 
-OUTPUT: sampstat  tech1  modindices(5)  standardized;
+OUTPUT: sampstat  tech1  standardized tech10 tech8;
