@@ -1,0 +1,1622 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+    IR-TREE MODEL ERS MRS ONS OCEAN and Continuous Education with Cross Loading
+
+DATA:
+     FILE = CONT_ED.dat;
+VARIABLE:
+ NAMES =
+       em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+                cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+                nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+                om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+              e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+              e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+              e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+              eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+          eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+          eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+          eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+          oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+          aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+          aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+          aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+          aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+                ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+                ons186 ons187 ons188 ons189
+                ed
+      ;
+       MISSING are all (-9999);
+      usevariables =
+       em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+                cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+                nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+                om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+              e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+              e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+              e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+              eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+          eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+          eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+          eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+          oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+          aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+          aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+          aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+          aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+                ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+                ons186 ons187 ons188 ons189
+                ed;
+      categorical =
+       em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+                cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+                nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+                om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+              e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3
+              e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6
+              e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10
+              eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+          eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+          eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+          eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+          oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+          aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+          aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+          aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+          aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+                ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+                ons186 ons187 ons188 ons189;
+ANALYSIS:
+   ALGORITHM = INTEGRATION EM;
+   ESTIMATOR = MLR;
+   INTEGRATION = MONTECARLO(500);
+   MITERATIONS = 1000;
+   LINK = probit;
+OUTPUT:
+  sampstat  tech1   standardized tech10;
+MODEL:
+      open by o_1@1 o_2 o_3 o_4 o_5 o_6 o_7 o_8 o_9 o_10 oex93
+        oex98 oex103 oex108 oex113 oex118
+        oex123 oex128 oex129 oex132 oex137 oex142 oex147 oex152
+        oex157 oex162 oex167 oex172 oex173 oex176
+        om5 om10 om15 om20 om25 om30 om35 om40 om41 om44;
+        cons by c_1@1 c_2 c_3 c_4 c_5 c_6 c_7 c_8 c_9
+        cex91 cex96 cex101 cex106 cex111 cex116 cex121
+        cex126 cex131 cex135 cex140 cex145 cex150 cex155 cex160 cex165
+        cex170 cex175
+        cm3 cm8 cm13 cm18 cm23 cm28 cm33 cm38 cm43;
+        extra by e_1@1 e_2 e_3 e_4 e_5 e_6 e_7 e_8
+         eex89 eex94 eex99 eex104 eex109 eex114 eex119
+        eex124 eex133 eex138 eex143 eex148 eex153 eex158 eex163 eex168
+        em1 em6 em11 em16 em21 em26 em31 em36;
+        agree by a_1@1 a_2 a_3 a_4 a_5 a_6 a_7 a_8 a_9
+        aex90 aex95 aex100 aex105 aex110 aex115
+        aex120 aex125 aex130 aex134 aex139 aex144 aex149
+        aex154 aex159 aex164 aex169 aex174
+        am2 am7 am12 am17 am22 am27 am32 am37 am42;
+        neuro by n_1@1 n_2 n_3 n_4 n_5 n_6 n_7 n_8
+        nex92 nex97 nex102 nex107 nex112 nex117 nex122
+        nex127 nex136 nex141 nex146 nex151 nex156
+        nex161 nex166 nex171
+        nm4 nm9 nm14 nm19 nm24 nm29 nm34 nm39;
+      mrs by em1@1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12
+                cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23
+                nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34
+                om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44 ;
+      ers by eex89@-1 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98
+          eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108
+          eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118
+          eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128
+          oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138
+          aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148
+          aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158
+          aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168
+          aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176;
+      ons by ons177@1 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185
+                ons186 ons187 ons188 ons189;
+                ers with ed mrs ons open cons extra agree neuro;
+                mrs with ed ons open cons extra agree neuro;
+                ons with ed open cons extra agree neuro;
+                open with ed cons extra agree neuro;
+                cons with ed extra agree neuro;
+                extra with ed agree neuro;
+                agree with ed neuro;
+                neuro with ed;
+INPUT_END
+2
+2
+2
+2
+MLR
+1
+GENERAL
+0
+190
+8
+0
+em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23 nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44 e_1 a_1 c_1 n_1 o_1 e_2 a_2 c_2 n_2 o_2 e_3 a_3 c_3 n_3 o_3 e_4 a_4 c_4 n_4 o_4 e_5 a_5 c_5 n_5 o_5 e_6 a_6 c_6 n_6 o_6 e_7 a_7 c_7 n_7 o_7 e_8 a_8 c_8 n_8 o_8 o_9 a_9 c_9 o_10 eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128 oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176 ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185 ons186 ons187 ons188 ons189 ed open cons extra agree neuro mrs ers ons
+1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0
+0
+8
+open
+o_1 o_2 o_3 o_4 o_5 o_6 o_7 o_8 o_9 o_10 oex93 oex98 oex103 oex108 oex113 oex118 oex123 oex128 oex129 oex132 oex137 oex142 oex147 oex152 oex157 oex162 oex167 oex172 oex173 oex176 om5 om10 om15 om20 om25 om30 om35 om40 om41 om44
+cons
+c_1 c_2 c_3 c_4 c_5 c_6 c_7 c_8 c_9 cex91 cex96 cex101 cex106 cex111 cex116 cex121 cex126 cex131 cex135 cex140 cex145 cex150 cex155 cex160 cex165 cex170 cex175 cm3 cm8 cm13 cm18 cm23 cm28 cm33 cm38 cm43
+extra
+e_1 e_2 e_3 e_4 e_5 e_6 e_7 e_8 eex89 eex94 eex99 eex104 eex109 eex114 eex119 eex124 eex133 eex138 eex143 eex148 eex153 eex158 eex163 eex168 em1 em6 em11 em16 em21 em26 em31 em36
+agree
+a_1 a_2 a_3 a_4 a_5 a_6 a_7 a_8 a_9 aex90 aex95 aex100 aex105 aex110 aex115 aex120 aex125 aex130 aex134 aex139 aex144 aex149 aex154 aex159 aex164 aex169 aex174 am2 am7 am12 am17 am22 am27 am32 am37 am42
+neuro
+n_1 n_2 n_3 n_4 n_5 n_6 n_7 n_8 nex92 nex97 nex102 nex107 nex112 nex117 nex122 nex127 nex136 nex141 nex146 nex151 nex156 nex161 nex166 nex171 nm4 nm9 nm14 nm19 nm24 nm29 nm34 nm39
+mrs
+em1 am2 cm3 nm4 om5 em6 am7 cm8 nm9 om10 em11 am12 cm13 nm14 om15 em16 am17 cm18 nm19 om20 em21 am22 cm23 nm24 om25 em26 am27 cm28 nm29 om30 em31 am32 cm33 nm34 om35 em36 am37 cm38 nm39 om40 om41 am42 cm43 om44
+ers
+eex89 aex90 cex91 nex92 oex93 eex94 aex95 cex96 nex97 oex98 eex99 aex100 cex101 nex102 oex103 eex104 aex105 cex106 nex107 oex108 eex109 aex110 cex111 nex112 oex113 eex114 aex115 cex116 nex117 oex118 eex119 aex120 cex121 nex122 oex123 eex124 aex125 cex126 nex127 oex128 oex129 aex130 cex131 oex132 eex133 aex134 cex135 nex136 oex137 eex138 aex139 cex140 nex141 oex142 eex143 aex144 cex145 nex146 oex147 eex148 aex149 cex150 nex151 oex152 eex153 aex154 cex155 nex156 oex157 eex158 aex159 cex160 nex161 oex162 eex163 aex164 cex165 nex166 oex167 eex168 aex169 cex170 nex171 oex172 oex173 aex174 cex175 oex176
+ons
+ons177 ons178 ons179 ons180 ons181 ons182 ons183 ons184 ons185 ons186 ons187 ons188 ons189
+1 1 open o_1    1.000    0.000
+1 1 open o_2    0.724    0.059
+1 1 open o_3    0.749    0.053
+1 1 open o_4    0.789    0.053
+1 1 open o_5    0.930    0.052
+1 1 open o_6    0.599    0.045
+1 1 open o_7    0.294    0.025
+1 1 open o_8    0.781    0.060
+1 1 open o_9    0.253    0.023
+1 1 open o_10    0.582    0.042
+1 1 open oex93    0.249    0.095
+1 1 open oex98    0.034    0.106
+1 1 open oex103    0.146    0.076
+1 1 open oex108   -0.035    0.073
+1 1 open oex113    0.293    0.068
+1 1 open oex118    0.002    0.060
+1 1 open oex123    0.025    0.027
+1 1 open oex128    0.226    0.099
+1 1 open oex129   -0.081    0.031
+1 1 open oex132    0.172    0.031
+1 1 open oex137    0.583    0.042
+1 1 open oex142    0.506    0.036
+1 1 open oex147    0.397    0.034
+1 1 open oex152    0.483    0.038
+1 1 open oex157    0.587    0.047
+1 1 open oex162    0.455    0.037
+1 1 open oex167    0.158    0.029
+1 1 open oex172    0.566    0.043
+1 1 open oex173    0.366    0.034
+1 1 open oex176    0.337    0.037
+1 1 open om5   -0.434    0.032
+1 1 open om10   -0.430    0.033
+1 1 open om15   -0.295    0.026
+1 1 open om20   -0.353    0.028
+1 1 open om25   -0.314    0.027
+1 1 open om30   -0.324    0.028
+1 1 open om35    0.007    0.016
+1 1 open om40   -0.421    0.033
+1 1 open om41   -0.179    0.021
+1 1 open om44    0.006    0.016
+1 1 cons c_1    1.000    0.000
+1 1 cons c_2    1.101    0.139
+1 1 cons c_3    1.389    0.139
+1 1 cons c_4    1.317    0.163
+1 1 cons c_5    1.758    0.214
+1 1 cons c_6    1.346    0.138
+1 1 cons c_7    1.620    0.161
+1 1 cons c_8    1.520    0.157
+1 1 cons c_9    1.324    0.167
+1 1 cons cex91   -0.674    0.209
+1 1 cons cex96    0.362    0.115
+1 1 cons cex101   -0.630    0.435
+1 1 cons cex106    0.437    0.108
+1 1 cons cex111   -0.078    0.165
+1 1 cons cex116   -0.669    0.235
+1 1 cons cex121   -0.274    0.402
+1 1 cons cex126   -0.091    0.276
+1 1 cons cex131    0.621    0.122
+1 1 cons cex135    1.300    0.143
+1 1 cons cex140    0.895    0.111
+1 1 cons cex145    1.616    0.170
+1 1 cons cex150    1.119    0.132
+1 1 cons cex155    1.174    0.139
+1 1 cons cex160    1.342    0.137
+1 1 cons cex165    1.579    0.161
+1 1 cons cex170    1.352    0.144
+1 1 cons cex175    1.039    0.134
+1 1 cons cm3   -1.083    0.121
+1 1 cons cm8   -0.418    0.062
+1 1 cons cm13   -1.275    0.139
+1 1 cons cm18   -0.405    0.060
+1 1 cons cm23   -0.793    0.095
+1 1 cons cm28   -0.991    0.106
+1 1 cons cm33   -1.294    0.145
+1 1 cons cm38   -1.138    0.128
+1 1 cons cm43   -0.290    0.052
+1 1 extra e_1    1.000    0.000
+1 1 extra e_2    0.597    0.036
+1 1 extra e_3    0.803    0.056
+1 1 extra e_4    1.207    0.085
+1 1 extra e_5    0.855    0.045
+1 1 extra e_6    0.920    0.053
+1 1 extra e_7    0.814    0.046
+1 1 extra e_8    1.469    0.082
+1 1 extra eex89    0.201    0.054
+1 1 extra eex94    0.282    0.035
+1 1 extra eex99    0.209    0.058
+1 1 extra eex104    0.334    0.102
+1 1 extra eex109    0.698    0.048
+1 1 extra eex114    0.262    0.067
+1 1 extra eex119    0.504    0.047
+1 1 extra eex124    0.425    0.083
+1 1 extra eex133    0.548    0.040
+1 1 extra eex138    0.349    0.050
+1 1 extra eex143    0.476    0.042
+1 1 extra eex148    0.648    0.049
+1 1 extra eex153    0.374    0.047
+1 1 extra eex158    0.428    0.039
+1 1 extra eex163    0.510    0.051
+1 1 extra eex168    0.951    0.058
+1 1 extra em1   -0.138    0.023
+1 1 extra em6    0.104    0.022
+1 1 extra em11   -0.315    0.026
+1 1 extra em16   -0.501    0.035
+1 1 extra em21    0.129    0.022
+1 1 extra em26   -0.244    0.024
+1 1 extra em31    0.063    0.022
+1 1 extra em36   -0.355    0.027
+1 1 agree a_1    1.000    0.000
+1 1 agree a_2    0.814    0.099
+1 1 agree a_3    1.102    0.098
+1 1 agree a_4    1.157    0.087
+1 1 agree a_5    0.853    0.078
+1 1 agree a_6    1.218    0.074
+1 1 agree a_7    1.227    0.144
+1 1 agree a_8    1.309    0.076
+1 1 agree a_9    1.118    0.111
+1 1 agree aex90    0.457    0.092
+1 1 agree aex95   -0.993    0.234
+1 1 agree aex100   -0.618    0.235
+1 1 agree aex105    0.205    0.159
+1 1 agree aex110    0.169    0.125
+1 1 agree aex115    0.106    0.107
+1 1 agree aex120   -0.558    0.308
+1 1 agree aex125   -0.115    0.141
+1 1 agree aex130   -0.376    0.242
+1 1 agree aex134    0.692    0.067
+1 1 agree aex139    1.114    0.084
+1 1 agree aex144    0.918    0.066
+1 1 agree aex149    0.886    0.068
+1 1 agree aex154    0.591    0.056
+1 1 agree aex159    1.029    0.083
+1 1 agree aex164    1.342    0.105
+1 1 agree aex169    1.021    0.075
+1 1 agree aex174    1.138    0.090
+1 1 agree am2   -0.182    0.037
+1 1 agree am7   -0.978    0.082
+1 1 agree am12   -0.696    0.052
+1 1 agree am17   -0.581    0.057
+1 1 agree am22   -0.426    0.054
+1 1 agree am27   -0.392    0.043
+1 1 agree am32   -1.120    0.094
+1 1 agree am37   -0.543    0.050
+1 1 agree am42   -0.863    0.076
+1 1 neuro n_1    1.000    0.000
+1 1 neuro n_2    1.254    0.071
+1 1 neuro n_3    0.901    0.053
+1 1 neuro n_4    0.980    0.050
+1 1 neuro n_5    1.132    0.064
+1 1 neuro n_6    1.066    0.057
+1 1 neuro n_7    1.095    0.068
+1 1 neuro n_8    1.158    0.060
+1 1 neuro nex92    0.671    0.046
+1 1 neuro nex97    0.736    0.053
+1 1 neuro nex102    0.665    0.071
+1 1 neuro nex107    0.643    0.058
+1 1 neuro nex112    1.031    0.060
+1 1 neuro nex117    0.639    0.059
+1 1 neuro nex122    0.709    0.048
+1 1 neuro nex127    0.745    0.056
+1 1 neuro nex136    0.384    0.083
+1 1 neuro nex141    0.670    0.081
+1 1 neuro nex146    0.539    0.052
+1 1 neuro nex151    0.739    0.057
+1 1 neuro nex156   -0.043    0.088
+1 1 neuro nex161    0.709    0.062
+1 1 neuro nex166    0.313    0.128
+1 1 neuro nex171    0.578    0.068
+1 1 neuro nm4    0.418    0.032
+1 1 neuro nm9    0.240    0.030
+1 1 neuro nm14   -0.156    0.027
+1 1 neuro nm19   -0.133    0.027
+1 1 neuro nm24    0.596    0.039
+1 1 neuro nm29   -0.013    0.028
+1 1 neuro nm34    0.575    0.044
+1 1 neuro nm39    0.093    0.026
+1 1 mrs em1    1.000    0.000
+1 1 mrs am2    0.847    0.063
+1 1 mrs cm3    0.852    0.096
+1 1 mrs nm4    0.684    0.061
+1 1 mrs om5    1.031    0.086
+1 1 mrs em6    1.070    0.075
+1 1 mrs am7    1.197    0.107
+1 1 mrs cm8    0.941    0.072
+1 1 mrs nm9    1.130    0.080
+1 1 mrs om10    0.918    0.086
+1 1 mrs em11    1.056    0.076
+1 1 mrs am12    0.755    0.077
+1 1 mrs cm13    1.138    0.137
+1 1 mrs nm14    1.143    0.076
+1 1 mrs om15    1.236    0.091
+1 1 mrs em16    1.080    0.081
+1 1 mrs am17    1.242    0.093
+1 1 mrs cm18    1.121    0.086
+1 1 mrs nm19    1.066    0.075
+1 1 mrs om20    1.120    0.082
+1 1 mrs em21    1.153    0.078
+1 1 mrs am22    0.997    0.080
+1 1 mrs cm23    1.058    0.085
+1 1 mrs nm24    1.278    0.089
+1 1 mrs om25    1.115    0.085
+1 1 mrs em26    1.209    0.081
+1 1 mrs am27    1.053    0.078
+1 1 mrs cm28    1.288    0.108
+1 1 mrs nm29    1.224    0.086
+1 1 mrs om30    1.173    0.086
+1 1 mrs em31    1.223    0.082
+1 1 mrs am32    1.479    0.127
+1 1 mrs cm33    1.335    0.122
+1 1 mrs nm34    1.312    0.098
+1 1 mrs om35    0.886    0.064
+1 1 mrs em36    1.110    0.078
+1 1 mrs am37    1.093    0.084
+1 1 mrs cm38    1.311    0.109
+1 1 mrs nm39    1.204    0.083
+1 1 mrs om40    1.325    0.097
+1 1 mrs om41    1.108    0.082
+1 1 mrs am42    1.174    0.100
+1 1 mrs cm43    1.144    0.081
+1 1 mrs om44    0.847    0.064
+1 1 ers eex89   -1.000    0.000
+1 1 ers aex90   -0.778    0.103
+1 1 ers cex91   -0.865    0.147
+1 1 ers nex92   -0.523    0.064
+1 1 ers oex93   -1.162    0.172
+1 1 ers eex94   -1.136    0.100
+1 1 ers aex95   -1.123    0.180
+1 1 ers cex96   -0.953    0.124
+1 1 ers nex97   -1.267    0.115
+1 1 ers oex98   -1.573    0.230
+1 1 ers eex99   -0.962    0.119
+1 1 ers aex100   -1.200    0.211
+1 1 ers cex101   -1.202    0.285
+1 1 ers nex102   -1.380    0.139
+1 1 ers oex103   -1.304    0.168
+1 1 ers eex104   -1.377    0.176
+1 1 ers aex105   -1.152    0.156
+1 1 ers cex106   -0.821    0.099
+1 1 ers nex107   -1.081    0.108
+1 1 ers oex108   -1.424    0.163
+1 1 ers eex109   -1.383    0.120
+1 1 ers aex110   -1.001    0.148
+1 1 ers cex111   -1.046    0.130
+1 1 ers nex112   -1.237    0.113
+1 1 ers oex113   -1.208    0.144
+1 1 ers eex114   -1.255    0.135
+1 1 ers aex115   -1.134    0.124
+1 1 ers cex116   -1.765    0.281
+1 1 ers nex117   -1.196    0.114
+1 1 ers oex118   -1.268    0.155
+1 1 ers eex119   -1.479    0.138
+1 1 ers aex120   -1.061    0.232
+1 1 ers cex121   -2.069    0.364
+1 1 ers nex122   -1.326    0.117
+1 1 ers oex123   -1.252    0.115
+1 1 ers eex124   -1.199    0.130
+1 1 ers aex125   -1.142    0.148
+1 1 ers cex126   -1.396    0.209
+1 1 ers nex127   -1.290    0.120
+1 1 ers oex128   -1.432    0.214
+1 1 ers oex129   -1.027    0.102
+1 1 ers aex130   -1.449    0.227
+1 1 ers cex131   -0.853    0.098
+1 1 ers oex132   -0.730    0.077
+1 1 ers eex133    0.872    0.084
+1 1 ers aex134    0.930    0.085
+1 1 ers cex135    1.052    0.101
+1 1 ers nex136    0.811    0.113
+1 1 ers oex137    1.408    0.124
+1 1 ers eex138    1.103    0.112
+1 1 ers aex139    1.484    0.125
+1 1 ers cex140    0.964    0.091
+1 1 ers nex141    1.085    0.125
+1 1 ers oex142    1.060    0.095
+1 1 ers eex143    1.221    0.109
+1 1 ers aex144    0.874    0.086
+1 1 ers cex145    1.044    0.110
+1 1 ers nex146    1.044    0.102
+1 1 ers oex147    1.353    0.120
+1 1 ers eex148    1.460    0.134
+1 1 ers aex149    1.267    0.110
+1 1 ers cex150    1.075    0.106
+1 1 ers nex151    0.941    0.096
+1 1 ers oex152    1.374    0.124
+1 1 ers eex153    1.194    0.113
+1 1 ers aex154    1.209    0.104
+1 1 ers cex155    1.105    0.106
+1 1 ers nex156    1.124    0.133
+1 1 ers oex157    1.589    0.141
+1 1 ers eex158    1.411    0.125
+1 1 ers aex159    1.257    0.114
+1 1 ers cex160    1.414    0.126
+1 1 ers nex161    1.140    0.116
+1 1 ers oex162    1.158    0.104
+1 1 ers eex163    1.317    0.123
+1 1 ers aex164    1.625    0.143
+1 1 ers cex165    1.573    0.142
+1 1 ers nex166    1.490    0.189
+1 1 ers oex167    0.976    0.097
+1 1 ers eex168    1.339    0.122
+1 1 ers aex169    1.211    0.110
+1 1 ers cex170    1.420    0.127
+1 1 ers nex171    1.173    0.132
+1 1 ers oex172    1.439    0.129
+1 1 ers oex173    1.081    0.104
+1 1 ers aex174    1.592    0.138
+1 1 ers cex175    1.493    0.135
+1 1 ers oex176    1.003    0.100
+1 1 ons ons177    1.000    0.000
+1 1 ons ons178    1.075    0.048
+1 1 ons ons179    1.688    0.080
+1 1 ons ons180    1.004    0.047
+1 1 ons ons181    1.184    0.053
+1 1 ons ons182    0.841    0.040
+1 1 ons ons183    0.922    0.056
+1 1 ons ons184    0.713    0.067
+1 1 ons ons185    1.978    0.098
+1 1 ons ons186    1.006    0.049
+1 1 ons ons187    1.585    0.080
+1 1 ons ons188    0.501    0.031
+1 1 ons ons189    0.936    0.045
+2 1 ers ed   -0.274    0.037
+2 1 ers mrs   -0.163    0.021
+2 1 ers ons   -0.149    0.020
+2 1 ers open   -0.082    0.040
+2 1 ers cons   -0.065    0.026
+2 1 ers extra   -0.015    0.030
+2 1 ers agree   -0.109    0.023
+2 1 ers neuro    0.074    0.027
+2 1 mrs ed   -0.036    0.023
+2 1 mrs ons    0.006    0.011
+2 1 mrs open    0.004    0.029
+2 1 mrs cons    0.024    0.015
+2 1 mrs extra    0.023    0.024
+2 1 mrs agree    0.040    0.016
+2 1 mrs neuro   -0.007    0.021
+2 1 ons ed    0.828    0.043
+2 1 ons open    0.280    0.039
+2 1 ons cons    0.040    0.020
+2 1 ons extra   -0.060    0.029
+2 1 ons agree   -0.008    0.020
+2 1 ons neuro   -0.092    0.025
+2 1 open ed    0.749    0.074
+2 1 open cons    0.254    0.045
+2 1 open extra    0.672    0.067
+2 1 open agree    0.225    0.035
+2 1 open neuro   -0.363    0.051
+2 1 cons ed    0.203    0.045
+2 1 cons extra    0.256    0.037
+2 1 cons agree    0.223    0.026
+2 1 cons neuro   -0.319    0.040
+2 1 extra ed    0.078    0.052
+2 1 extra agree    0.261    0.025
+2 1 extra neuro   -0.417    0.033
+2 1 agree ed    0.103    0.034
+2 1 agree neuro   -0.369    0.030
+2 1 neuro ed   -0.312    0.046
+5 1 ed    5.491    0.112
+5 1 open    1.706    0.190
+5 1 cons    0.299    0.060
+5 1 extra    1.154    0.097
+5 1 agree    0.394    0.041
+5 1 neuro    0.773    0.065
+5 1 mrs    0.255    0.029
+5 1 ers    0.375    0.060
+5 1 ons    0.574    0.041
+11 1 open o_1    0.794    0.016
+11 1 open o_2    0.687    0.026
+11 1 open o_3    0.699    0.019
+11 1 open o_4    0.718    0.018
+11 1 open o_5    0.772    0.015
+11 1 open o_6    0.616    0.021
+11 1 open o_7    0.358    0.021
+11 1 open o_8    0.714    0.020
+11 1 open o_9    0.314    0.019
+11 1 open o_10    0.605    0.017
+11 1 open oex93    0.253    0.092
+11 1 open oex98    0.032    0.099
+11 1 open oex103    0.146    0.074
+11 1 open oex108   -0.035    0.072
+11 1 open oex113    0.289    0.061
+11 1 open oex118    0.002    0.062
+11 1 open oex123    0.026    0.028
+11 1 open oex128    0.213    0.087
+11 1 open oex129   -0.089    0.033
+11 1 open oex132    0.199    0.032
+11 1 open oex137    0.515    0.021
+11 1 open oex142    0.496    0.019
+11 1 open oex147    0.380    0.022
+11 1 open oex152    0.446    0.022
+11 1 open oex157    0.497    0.023
+11 1 open oex162    0.446    0.022
+11 1 open oex167    0.176    0.030
+11 1 open oex172    0.500    0.021
+11 1 open oex173    0.378    0.023
+11 1 open oex176    0.357    0.030
+11 1 open om5   -0.450    0.020
+11 1 open om10   -0.455    0.023
+11 1 open om15   -0.311    0.019
+11 1 open om20   -0.373    0.019
+11 1 open om25   -0.337    0.018
+11 1 open om30   -0.343    0.019
+11 1 open om35    0.009    0.019
+11 1 open om40   -0.416    0.019
+11 1 open om41   -0.200    0.020
+11 1 open om44    0.007    0.019
+11 1 cons c_1    0.480    0.037
+11 1 cons c_2    0.516    0.020
+11 1 cons c_3    0.605    0.040
+11 1 cons c_4    0.585    0.019
+11 1 cons c_5    0.693    0.017
+11 1 cons c_6    0.593    0.028
+11 1 cons c_7    0.663    0.030
+11 1 cons c_8    0.639    0.023
+11 1 cons c_9    0.587    0.019
+11 1 cons cex91   -0.318    0.084
+11 1 cons cex96    0.166    0.050
+11 1 cons cex101   -0.276    0.168
+11 1 cons cex106    0.205    0.044
+11 1 cons cex111   -0.036    0.076
+11 1 cons cex116   -0.250    0.082
+11 1 cons cex121   -0.094    0.138
+11 1 cons cex126   -0.038    0.115
+11 1 cons cex131    0.282    0.039
+11 1 cons cex135    0.539    0.019
+11 1 cons cex140    0.403    0.024
+11 1 cons cex145    0.630    0.021
+11 1 cons cex150    0.476    0.024
+11 1 cons cex155    0.493    0.024
+11 1 cons cex160    0.514    0.020
+11 1 cons cex165    0.563    0.021
+11 1 cons cex170    0.516    0.020
+11 1 cons cex175    0.406    0.028
+11 1 cons cm3   -0.485    0.028
+11 1 cons cm8   -0.204    0.020
+11 1 cons cm13   -0.528    0.033
+11 1 cons cm18   -0.191    0.021
+11 1 cons cm23   -0.362    0.021
+11 1 cons cm28   -0.421    0.022
+11 1 cons cm33   -0.517    0.023
+11 1 cons cm38   -0.470    0.020
+11 1 cons cm43   -0.137    0.020
+11 1 extra e_1    0.732    0.014
+11 1 extra e_2    0.540    0.022
+11 1 extra e_3    0.653    0.019
+11 1 extra e_4    0.792    0.016
+11 1 extra e_5    0.676    0.019
+11 1 extra e_6    0.703    0.015
+11 1 extra e_7    0.658    0.017
+11 1 extra e_8    0.845    0.011
+11 1 extra eex89    0.181    0.047
+11 1 extra eex94    0.240    0.028
+11 1 extra eex99    0.189    0.049
+11 1 extra eex104    0.263    0.072
+11 1 extra eex109    0.494    0.025
+11 1 extra eex114    0.217    0.051
+11 1 extra eex119    0.371    0.026
+11 1 extra eex124    0.344    0.057
+11 1 extra eex133    0.463    0.025
+11 1 extra eex138    0.298    0.037
+11 1 extra eex143    0.381    0.024
+11 1 extra eex148    0.464    0.023
+11 1 extra eex153    0.310    0.034
+11 1 extra eex158    0.330    0.024
+11 1 extra eex163    0.394    0.030
+11 1 extra eex168    0.624    0.020
+11 1 extra em1   -0.132    0.021
+11 1 extra em6    0.098    0.020
+11 1 extra em11   -0.288    0.018
+11 1 extra em16   -0.431    0.018
+11 1 extra em21    0.119    0.020
+11 1 extra em26   -0.219    0.019
+11 1 extra em31    0.057    0.020
+11 1 extra em36   -0.318    0.019
+11 1 agree a_1    0.532    0.020
+11 1 agree a_2    0.455    0.036
+11 1 agree a_3    0.569    0.028
+11 1 agree a_4    0.588    0.022
+11 1 agree a_5    0.472    0.026
+11 1 agree a_6    0.608    0.018
+11 1 agree a_7    0.610    0.036
+11 1 agree a_8    0.635    0.018
+11 1 agree a_9    0.575    0.029
+11 1 agree aex90    0.244    0.044
+11 1 agree aex95   -0.490    0.092
+11 1 agree aex100   -0.314    0.112
+11 1 agree aex105    0.103    0.077
+11 1 agree aex110    0.089    0.065
+11 1 agree aex115    0.054    0.054
+11 1 agree aex120   -0.295    0.151
+11 1 agree aex125   -0.059    0.074
+11 1 agree aex130   -0.180    0.113
+11 1 agree aex134    0.371    0.029
+11 1 agree aex139    0.501    0.020
+11 1 agree aex144    0.480    0.023
+11 1 agree aex149    0.431    0.022
+11 1 agree aex154    0.300    0.021
+11 1 agree aex159    0.492    0.023
+11 1 agree aex164    0.565    0.022
+11 1 agree aex169    0.493    0.024
+11 1 agree aex174    0.498    0.022
+11 1 agree am2   -0.105    0.021
+11 1 agree am7   -0.478    0.027
+11 1 agree am12   -0.384    0.022
+11 1 agree am17   -0.301    0.025
+11 1 agree am22   -0.236    0.026
+11 1 agree am27   -0.215    0.020
+11 1 agree am32   -0.508    0.026
+11 1 agree am37   -0.291    0.023
+11 1 agree am42   -0.433    0.022
+11 1 neuro n_1    0.660    0.016
+11 1 neuro n_2    0.741    0.014
+11 1 neuro n_3    0.621    0.017
+11 1 neuro n_4    0.653    0.015
+11 1 neuro n_5    0.705    0.017
+11 1 neuro n_6    0.684    0.014
+11 1 neuro n_7    0.693    0.017
+11 1 neuro n_8    0.713    0.014
+11 1 neuro nex92    0.499    0.023
+11 1 neuro nex97    0.472    0.023
+11 1 neuro nex102    0.422    0.034
+11 1 neuro nex107    0.440    0.030
+11 1 neuro nex112    0.611    0.020
+11 1 neuro nex117    0.426    0.030
+11 1 neuro nex122    0.452    0.021
+11 1 neuro nex127    0.474    0.026
+11 1 neuro nex136    0.285    0.057
+11 1 neuro nex141    0.428    0.040
+11 1 neuro nex146    0.362    0.027
+11 1 neuro nex151    0.477    0.026
+11 1 neuro nex156   -0.031    0.064
+11 1 neuro nex161    0.441    0.027
+11 1 neuro nex166    0.195    0.076
+11 1 neuro nex171    0.371    0.035
+11 1 neuro nm4    0.328    0.020
+11 1 neuro nm9    0.180    0.021
+11 1 neuro nm14   -0.118    0.020
+11 1 neuro nm19   -0.102    0.021
+11 1 neuro nm24    0.404    0.019
+11 1 neuro nm29   -0.009    0.021
+11 1 neuro nm34    0.390    0.022
+11 1 neuro nm39    0.070    0.019
+11 1 mrs em1    0.448    0.021
+11 1 mrs am2    0.393    0.020
+11 1 mrs cm3    0.352    0.035
+11 1 mrs nm4    0.309    0.023
+11 1 mrs om5    0.413    0.024
+11 1 mrs em6    0.472    0.018
+11 1 mrs am7    0.471    0.034
+11 1 mrs cm8    0.423    0.021
+11 1 mrs nm9    0.488    0.020
+11 1 mrs om10    0.375    0.029
+11 1 mrs em11    0.453    0.021
+11 1 mrs am12    0.335    0.029
+11 1 mrs cm13    0.435    0.043
+11 1 mrs nm14    0.496    0.018
+11 1 mrs om15    0.504    0.020
+11 1 mrs em16    0.436    0.023
+11 1 mrs am17    0.517    0.026
+11 1 mrs cm18    0.487    0.022
+11 1 mrs nm19    0.471    0.018
+11 1 mrs om20    0.457    0.022
+11 1 mrs em21    0.498    0.020
+11 1 mrs am22    0.443    0.026
+11 1 mrs cm23    0.446    0.024
+11 1 mrs nm24    0.498    0.021
+11 1 mrs om25    0.462    0.022
+11 1 mrs em26    0.511    0.019
+11 1 mrs am27    0.464    0.021
+11 1 mrs cm28    0.506    0.028
+11 1 mrs nm29    0.525    0.018
+11 1 mrs om30    0.479    0.021
+11 1 mrs em31    0.524    0.018
+11 1 mrs am32    0.539    0.034
+11 1 mrs cm33    0.493    0.032
+11 1 mrs nm34    0.510    0.022
+11 1 mrs om35    0.408    0.018
+11 1 mrs em36    0.467    0.022
+11 1 mrs am37    0.471    0.023
+11 1 mrs cm38    0.500    0.028
+11 1 mrs nm39    0.518    0.017
+11 1 mrs om40    0.506    0.022
+11 1 mrs om41    0.479    0.021
+11 1 mrs am42    0.474    0.030
+11 1 mrs cm43    0.498    0.019
+11 1 mrs om44    0.393    0.019
+11 1 ers eex89   -0.512    0.029
+11 1 ers aex90   -0.404    0.037
+11 1 ers cex91   -0.457    0.063
+11 1 ers nex92   -0.271    0.026
+11 1 ers oex93   -0.552    0.053
+11 1 ers eex94   -0.552    0.022
+11 1 ers aex95   -0.540    0.063
+11 1 ers cex96   -0.489    0.039
+11 1 ers nex97   -0.566    0.023
+11 1 ers oex98   -0.692    0.048
+11 1 ers eex99   -0.497    0.038
+11 1 ers aex100   -0.594    0.067
+11 1 ers cex101   -0.588    0.085
+11 1 ers nex102   -0.610    0.030
+11 1 ers oex103   -0.611    0.041
+11 1 ers eex104   -0.619    0.041
+11 1 ers aex105   -0.563    0.047
+11 1 ers cex106   -0.431    0.032
+11 1 ers nex107   -0.514    0.029
+11 1 ers oex108   -0.658    0.036
+11 1 ers eex109   -0.557    0.022
+11 1 ers aex110   -0.514    0.050
+11 1 ers cex111   -0.541    0.040
+11 1 ers nex112   -0.510    0.024
+11 1 ers oex113   -0.559    0.040
+11 1 ers eex114   -0.593    0.033
+11 1 ers aex115   -0.564    0.031
+11 1 ers cex116   -0.737    0.054
+11 1 ers nex117   -0.555    0.026
+11 1 ers oex118   -0.613    0.040
+11 1 ers eex119   -0.620    0.022
+11 1 ers aex120   -0.546    0.080
+11 1 ers cex121   -0.793    0.048
+11 1 ers nex122   -0.588    0.021
+11 1 ers oex123   -0.607    0.019
+11 1 ers eex124   -0.553    0.033
+11 1 ers aex125   -0.577    0.042
+11 1 ers cex126   -0.652    0.051
+11 1 ers nex127   -0.571    0.025
+11 1 ers oex128   -0.635    0.052
+11 1 ers oex129   -0.533    0.025
+11 1 ers aex130   -0.676    0.055
+11 1 ers cex131   -0.432    0.030
+11 1 ers oex132   -0.396    0.026
+11 1 ers eex133    0.420    0.022
+11 1 ers aex134    0.486    0.028
+11 1 ers cex135    0.487    0.032
+11 1 ers nex136    0.418    0.043
+11 1 ers oex137    0.582    0.024
+11 1 ers eex138    0.536    0.028
+11 1 ers aex139    0.650    0.028
+11 1 ers cex140    0.486    0.028
+11 1 ers nex141    0.482    0.036
+11 1 ers oex142    0.488    0.023
+11 1 ers eex143    0.556    0.022
+11 1 ers aex144    0.445    0.033
+11 1 ers cex145    0.455    0.036
+11 1 ers nex146    0.488    0.024
+11 1 ers oex147    0.606    0.021
+11 1 ers eex148    0.595    0.022
+11 1 ers aex149    0.601    0.027
+11 1 ers cex150    0.512    0.032
+11 1 ers nex151    0.423    0.026
+11 1 ers oex152    0.595    0.023
+11 1 ers eex153    0.563    0.025
+11 1 ers aex154    0.598    0.023
+11 1 ers cex155    0.518    0.031
+11 1 ers nex156    0.568    0.038
+11 1 ers oex157    0.630    0.024
+11 1 ers eex158    0.620    0.020
+11 1 ers aex159    0.585    0.033
+11 1 ers cex160    0.605    0.032
+11 1 ers nex161    0.494    0.025
+11 1 ers oex162    0.533    0.023
+11 1 ers eex163    0.580    0.025
+11 1 ers aex164    0.667    0.033
+11 1 ers cex165    0.628    0.032
+11 1 ers nex166    0.649    0.041
+11 1 ers oex167    0.510    0.026
+11 1 ers eex168    0.501    0.023
+11 1 ers aex169    0.570    0.031
+11 1 ers cex170    0.606    0.030
+11 1 ers nex171    0.524    0.032
+11 1 ers oex172    0.595    0.024
+11 1 ers oex173    0.523    0.025
+11 1 ers aex174    0.678    0.030
+11 1 ers cex175    0.653    0.030
+11 1 ers oex176    0.499    0.026
+11 1 ons ons177    0.604    0.014
+11 1 ons ons178    0.632    0.013
+11 1 ons ons179    0.788    0.011
+11 1 ons ons180    0.606    0.015
+11 1 ons ons181    0.668    0.013
+11 1 ons ons182    0.538    0.015
+11 1 ons ons183    0.573    0.021
+11 1 ons ons184    0.475    0.032
+11 1 ons ons185    0.832    0.010
+11 1 ons ons186    0.606    0.015
+11 1 ons ons187    0.769    0.013
+11 1 ons ons188    0.355    0.017
+11 1 ons ons189    0.579    0.015
+12 1 ers ed   -0.191    0.019
+12 1 ers mrs   -0.529    0.032
+12 1 ers ons   -0.321    0.028
+12 1 ers open   -0.102    0.048
+12 1 ers cons   -0.193    0.063
+12 1 ers extra   -0.022    0.045
+12 1 ers agree   -0.284    0.054
+12 1 ers neuro    0.138    0.047
+12 1 mrs ed   -0.031    0.019
+12 1 mrs ons    0.017    0.029
+12 1 mrs open    0.006    0.045
+12 1 mrs cons    0.087    0.052
+12 1 mrs extra    0.043    0.043
+12 1 mrs agree    0.126    0.050
+12 1 mrs neuro   -0.016    0.047
+12 1 ons ed    0.466    0.012
+12 1 ons open    0.283    0.033
+12 1 ons cons    0.097    0.042
+12 1 ons extra   -0.074    0.036
+12 1 ons agree   -0.018    0.041
+12 1 ons neuro   -0.139    0.036
+12 1 open ed    0.245    0.020
+12 1 open cons    0.356    0.033
+12 1 open extra    0.479    0.028
+12 1 open agree    0.274    0.035
+12 1 open neuro   -0.316    0.036
+12 1 cons ed    0.159    0.024
+12 1 cons extra    0.435    0.031
+12 1 cons agree    0.650    0.028
+12 1 cons neuro   -0.664    0.030
+12 1 extra ed    0.031    0.020
+12 1 extra agree    0.387    0.030
+12 1 extra neuro   -0.442    0.025
+12 1 agree ed    0.070    0.024
+12 1 agree neuro   -0.668    0.027
+12 1 neuro ed   -0.152    0.020
+15 1 ed    1.000    0.000
+15 1 open    1.000    0.000
+15 1 cons    1.000    0.000
+15 1 extra    1.000    0.000
+15 1 agree    1.000    0.000
+15 1 neuro    1.000    0.000
+15 1 mrs    1.000    0.000
+15 1 ers    1.000    0.000
+15 1 ons    1.000    0.000
+21 1 open o_1    0.794    0.016
+21 1 open o_2    0.687    0.026
+21 1 open o_3    0.699    0.019
+21 1 open o_4    0.718    0.018
+21 1 open o_5    0.772    0.015
+21 1 open o_6    0.616    0.021
+21 1 open o_7    0.358    0.021
+21 1 open o_8    0.714    0.020
+21 1 open o_9    0.314    0.019
+21 1 open o_10    0.605    0.017
+21 1 open oex93    0.253    0.092
+21 1 open oex98    0.032    0.099
+21 1 open oex103    0.146    0.074
+21 1 open oex108   -0.035    0.072
+21 1 open oex113    0.289    0.061
+21 1 open oex118    0.002    0.062
+21 1 open oex123    0.026    0.028
+21 1 open oex128    0.213    0.087
+21 1 open oex129   -0.089    0.033
+21 1 open oex132    0.199    0.032
+21 1 open oex137    0.515    0.021
+21 1 open oex142    0.496    0.019
+21 1 open oex147    0.380    0.022
+21 1 open oex152    0.446    0.022
+21 1 open oex157    0.497    0.023
+21 1 open oex162    0.446    0.022
+21 1 open oex167    0.176    0.030
+21 1 open oex172    0.500    0.021
+21 1 open oex173    0.378    0.023
+21 1 open oex176    0.357    0.030
+21 1 open om5   -0.450    0.020
+21 1 open om10   -0.455    0.023
+21 1 open om15   -0.311    0.019
+21 1 open om20   -0.373    0.019
+21 1 open om25   -0.337    0.018
+21 1 open om30   -0.343    0.019
+21 1 open om35    0.009    0.019
+21 1 open om40   -0.416    0.019
+21 1 open om41   -0.200    0.020
+21 1 open om44    0.007    0.019
+21 1 cons c_1    0.480    0.037
+21 1 cons c_2    0.516    0.020
+21 1 cons c_3    0.605    0.040
+21 1 cons c_4    0.585    0.019
+21 1 cons c_5    0.693    0.017
+21 1 cons c_6    0.593    0.028
+21 1 cons c_7    0.663    0.030
+21 1 cons c_8    0.639    0.023
+21 1 cons c_9    0.587    0.019
+21 1 cons cex91   -0.318    0.084
+21 1 cons cex96    0.166    0.050
+21 1 cons cex101   -0.276    0.168
+21 1 cons cex106    0.205    0.044
+21 1 cons cex111   -0.036    0.076
+21 1 cons cex116   -0.250    0.082
+21 1 cons cex121   -0.094    0.138
+21 1 cons cex126   -0.038    0.115
+21 1 cons cex131    0.282    0.039
+21 1 cons cex135    0.539    0.019
+21 1 cons cex140    0.403    0.024
+21 1 cons cex145    0.630    0.021
+21 1 cons cex150    0.476    0.024
+21 1 cons cex155    0.493    0.024
+21 1 cons cex160    0.514    0.020
+21 1 cons cex165    0.563    0.021
+21 1 cons cex170    0.516    0.020
+21 1 cons cex175    0.406    0.028
+21 1 cons cm3   -0.485    0.028
+21 1 cons cm8   -0.204    0.020
+21 1 cons cm13   -0.528    0.033
+21 1 cons cm18   -0.191    0.021
+21 1 cons cm23   -0.362    0.021
+21 1 cons cm28   -0.421    0.022
+21 1 cons cm33   -0.517    0.023
+21 1 cons cm38   -0.470    0.020
+21 1 cons cm43   -0.137    0.020
+21 1 extra e_1    0.732    0.014
+21 1 extra e_2    0.540    0.022
+21 1 extra e_3    0.653    0.019
+21 1 extra e_4    0.792    0.016
+21 1 extra e_5    0.676    0.019
+21 1 extra e_6    0.703    0.015
+21 1 extra e_7    0.658    0.017
+21 1 extra e_8    0.845    0.011
+21 1 extra eex89    0.181    0.047
+21 1 extra eex94    0.240    0.028
+21 1 extra eex99    0.189    0.049
+21 1 extra eex104    0.263    0.072
+21 1 extra eex109    0.494    0.025
+21 1 extra eex114    0.217    0.051
+21 1 extra eex119    0.371    0.026
+21 1 extra eex124    0.344    0.057
+21 1 extra eex133    0.463    0.025
+21 1 extra eex138    0.298    0.037
+21 1 extra eex143    0.381    0.024
+21 1 extra eex148    0.464    0.023
+21 1 extra eex153    0.310    0.034
+21 1 extra eex158    0.330    0.024
+21 1 extra eex163    0.394    0.030
+21 1 extra eex168    0.624    0.020
+21 1 extra em1   -0.132    0.021
+21 1 extra em6    0.098    0.020
+21 1 extra em11   -0.288    0.018
+21 1 extra em16   -0.431    0.018
+21 1 extra em21    0.119    0.020
+21 1 extra em26   -0.219    0.019
+21 1 extra em31    0.057    0.020
+21 1 extra em36   -0.318    0.019
+21 1 agree a_1    0.532    0.020
+21 1 agree a_2    0.455    0.036
+21 1 agree a_3    0.569    0.028
+21 1 agree a_4    0.588    0.022
+21 1 agree a_5    0.472    0.026
+21 1 agree a_6    0.608    0.018
+21 1 agree a_7    0.610    0.036
+21 1 agree a_8    0.635    0.018
+21 1 agree a_9    0.575    0.029
+21 1 agree aex90    0.244    0.044
+21 1 agree aex95   -0.490    0.092
+21 1 agree aex100   -0.314    0.112
+21 1 agree aex105    0.103    0.077
+21 1 agree aex110    0.089    0.065
+21 1 agree aex115    0.054    0.054
+21 1 agree aex120   -0.295    0.151
+21 1 agree aex125   -0.059    0.074
+21 1 agree aex130   -0.180    0.113
+21 1 agree aex134    0.371    0.029
+21 1 agree aex139    0.501    0.020
+21 1 agree aex144    0.480    0.023
+21 1 agree aex149    0.431    0.022
+21 1 agree aex154    0.300    0.021
+21 1 agree aex159    0.492    0.023
+21 1 agree aex164    0.565    0.022
+21 1 agree aex169    0.493    0.024
+21 1 agree aex174    0.498    0.022
+21 1 agree am2   -0.105    0.021
+21 1 agree am7   -0.478    0.027
+21 1 agree am12   -0.384    0.022
+21 1 agree am17   -0.301    0.025
+21 1 agree am22   -0.236    0.026
+21 1 agree am27   -0.215    0.020
+21 1 agree am32   -0.508    0.026
+21 1 agree am37   -0.291    0.023
+21 1 agree am42   -0.433    0.022
+21 1 neuro n_1    0.660    0.016
+21 1 neuro n_2    0.741    0.014
+21 1 neuro n_3    0.621    0.017
+21 1 neuro n_4    0.653    0.015
+21 1 neuro n_5    0.705    0.017
+21 1 neuro n_6    0.684    0.014
+21 1 neuro n_7    0.693    0.017
+21 1 neuro n_8    0.713    0.014
+21 1 neuro nex92    0.499    0.023
+21 1 neuro nex97    0.472    0.023
+21 1 neuro nex102    0.422    0.034
+21 1 neuro nex107    0.440    0.030
+21 1 neuro nex112    0.611    0.020
+21 1 neuro nex117    0.426    0.030
+21 1 neuro nex122    0.452    0.021
+21 1 neuro nex127    0.474    0.026
+21 1 neuro nex136    0.285    0.057
+21 1 neuro nex141    0.428    0.040
+21 1 neuro nex146    0.362    0.027
+21 1 neuro nex151    0.477    0.026
+21 1 neuro nex156   -0.031    0.064
+21 1 neuro nex161    0.441    0.027
+21 1 neuro nex166    0.195    0.076
+21 1 neuro nex171    0.371    0.035
+21 1 neuro nm4    0.328    0.020
+21 1 neuro nm9    0.180    0.021
+21 1 neuro nm14   -0.118    0.020
+21 1 neuro nm19   -0.102    0.021
+21 1 neuro nm24    0.404    0.019
+21 1 neuro nm29   -0.009    0.021
+21 1 neuro nm34    0.390    0.022
+21 1 neuro nm39    0.070    0.019
+21 1 mrs em1    0.448    0.021
+21 1 mrs am2    0.393    0.020
+21 1 mrs cm3    0.352    0.035
+21 1 mrs nm4    0.309    0.023
+21 1 mrs om5    0.413    0.024
+21 1 mrs em6    0.472    0.018
+21 1 mrs am7    0.471    0.034
+21 1 mrs cm8    0.423    0.021
+21 1 mrs nm9    0.488    0.020
+21 1 mrs om10    0.375    0.029
+21 1 mrs em11    0.453    0.021
+21 1 mrs am12    0.335    0.029
+21 1 mrs cm13    0.435    0.043
+21 1 mrs nm14    0.496    0.018
+21 1 mrs om15    0.504    0.020
+21 1 mrs em16    0.436    0.023
+21 1 mrs am17    0.517    0.026
+21 1 mrs cm18    0.487    0.022
+21 1 mrs nm19    0.471    0.018
+21 1 mrs om20    0.457    0.022
+21 1 mrs em21    0.498    0.020
+21 1 mrs am22    0.443    0.026
+21 1 mrs cm23    0.446    0.024
+21 1 mrs nm24    0.498    0.021
+21 1 mrs om25    0.462    0.022
+21 1 mrs em26    0.511    0.019
+21 1 mrs am27    0.464    0.021
+21 1 mrs cm28    0.506    0.028
+21 1 mrs nm29    0.525    0.018
+21 1 mrs om30    0.479    0.021
+21 1 mrs em31    0.524    0.018
+21 1 mrs am32    0.539    0.034
+21 1 mrs cm33    0.493    0.032
+21 1 mrs nm34    0.510    0.022
+21 1 mrs om35    0.408    0.018
+21 1 mrs em36    0.467    0.022
+21 1 mrs am37    0.471    0.023
+21 1 mrs cm38    0.500    0.028
+21 1 mrs nm39    0.518    0.017
+21 1 mrs om40    0.506    0.022
+21 1 mrs om41    0.479    0.021
+21 1 mrs am42    0.474    0.030
+21 1 mrs cm43    0.498    0.019
+21 1 mrs om44    0.393    0.019
+21 1 ers eex89   -0.512    0.029
+21 1 ers aex90   -0.404    0.037
+21 1 ers cex91   -0.457    0.063
+21 1 ers nex92   -0.271    0.026
+21 1 ers oex93   -0.552    0.053
+21 1 ers eex94   -0.552    0.022
+21 1 ers aex95   -0.540    0.063
+21 1 ers cex96   -0.489    0.039
+21 1 ers nex97   -0.566    0.023
+21 1 ers oex98   -0.692    0.048
+21 1 ers eex99   -0.497    0.038
+21 1 ers aex100   -0.594    0.067
+21 1 ers cex101   -0.588    0.085
+21 1 ers nex102   -0.610    0.030
+21 1 ers oex103   -0.611    0.041
+21 1 ers eex104   -0.619    0.041
+21 1 ers aex105   -0.563    0.047
+21 1 ers cex106   -0.431    0.032
+21 1 ers nex107   -0.514    0.029
+21 1 ers oex108   -0.658    0.036
+21 1 ers eex109   -0.557    0.022
+21 1 ers aex110   -0.514    0.050
+21 1 ers cex111   -0.541    0.040
+21 1 ers nex112   -0.510    0.024
+21 1 ers oex113   -0.559    0.040
+21 1 ers eex114   -0.593    0.033
+21 1 ers aex115   -0.564    0.031
+21 1 ers cex116   -0.737    0.054
+21 1 ers nex117   -0.555    0.026
+21 1 ers oex118   -0.613    0.040
+21 1 ers eex119   -0.620    0.022
+21 1 ers aex120   -0.546    0.080
+21 1 ers cex121   -0.793    0.048
+21 1 ers nex122   -0.588    0.021
+21 1 ers oex123   -0.607    0.019
+21 1 ers eex124   -0.553    0.033
+21 1 ers aex125   -0.577    0.042
+21 1 ers cex126   -0.652    0.051
+21 1 ers nex127   -0.571    0.025
+21 1 ers oex128   -0.635    0.052
+21 1 ers oex129   -0.533    0.025
+21 1 ers aex130   -0.676    0.055
+21 1 ers cex131   -0.432    0.030
+21 1 ers oex132   -0.396    0.026
+21 1 ers eex133    0.420    0.022
+21 1 ers aex134    0.486    0.028
+21 1 ers cex135    0.487    0.032
+21 1 ers nex136    0.418    0.043
+21 1 ers oex137    0.582    0.024
+21 1 ers eex138    0.536    0.028
+21 1 ers aex139    0.650    0.028
+21 1 ers cex140    0.486    0.028
+21 1 ers nex141    0.482    0.036
+21 1 ers oex142    0.488    0.023
+21 1 ers eex143    0.556    0.022
+21 1 ers aex144    0.445    0.033
+21 1 ers cex145    0.455    0.036
+21 1 ers nex146    0.488    0.024
+21 1 ers oex147    0.606    0.021
+21 1 ers eex148    0.595    0.022
+21 1 ers aex149    0.601    0.027
+21 1 ers cex150    0.512    0.032
+21 1 ers nex151    0.423    0.026
+21 1 ers oex152    0.595    0.023
+21 1 ers eex153    0.563    0.025
+21 1 ers aex154    0.598    0.023
+21 1 ers cex155    0.518    0.031
+21 1 ers nex156    0.568    0.038
+21 1 ers oex157    0.630    0.024
+21 1 ers eex158    0.620    0.020
+21 1 ers aex159    0.585    0.033
+21 1 ers cex160    0.605    0.032
+21 1 ers nex161    0.494    0.025
+21 1 ers oex162    0.533    0.023
+21 1 ers eex163    0.580    0.025
+21 1 ers aex164    0.667    0.033
+21 1 ers cex165    0.628    0.032
+21 1 ers nex166    0.649    0.041
+21 1 ers oex167    0.510    0.026
+21 1 ers eex168    0.501    0.023
+21 1 ers aex169    0.570    0.031
+21 1 ers cex170    0.606    0.030
+21 1 ers nex171    0.524    0.032
+21 1 ers oex172    0.595    0.024
+21 1 ers oex173    0.523    0.025
+21 1 ers aex174    0.678    0.030
+21 1 ers cex175    0.653    0.030
+21 1 ers oex176    0.499    0.026
+21 1 ons ons177    0.604    0.014
+21 1 ons ons178    0.632    0.013
+21 1 ons ons179    0.788    0.011
+21 1 ons ons180    0.606    0.015
+21 1 ons ons181    0.668    0.013
+21 1 ons ons182    0.538    0.015
+21 1 ons ons183    0.573    0.021
+21 1 ons ons184    0.475    0.032
+21 1 ons ons185    0.832    0.010
+21 1 ons ons186    0.606    0.015
+21 1 ons ons187    0.769    0.013
+21 1 ons ons188    0.355    0.017
+21 1 ons ons189    0.579    0.015
+22 1 ers ed   -0.191    0.019
+22 1 ers mrs   -0.529    0.032
+22 1 ers ons   -0.321    0.028
+22 1 ers open   -0.102    0.048
+22 1 ers cons   -0.193    0.063
+22 1 ers extra   -0.022    0.045
+22 1 ers agree   -0.284    0.054
+22 1 ers neuro    0.138    0.047
+22 1 mrs ed   -0.031    0.019
+22 1 mrs ons    0.017    0.029
+22 1 mrs open    0.006    0.045
+22 1 mrs cons    0.087    0.052
+22 1 mrs extra    0.043    0.043
+22 1 mrs agree    0.126    0.050
+22 1 mrs neuro   -0.016    0.047
+22 1 ons ed    0.466    0.012
+22 1 ons open    0.283    0.033
+22 1 ons cons    0.097    0.042
+22 1 ons extra   -0.074    0.036
+22 1 ons agree   -0.018    0.041
+22 1 ons neuro   -0.139    0.036
+22 1 open ed    0.245    0.020
+22 1 open cons    0.356    0.033
+22 1 open extra    0.479    0.028
+22 1 open agree    0.274    0.035
+22 1 open neuro   -0.316    0.036
+22 1 cons ed    0.159    0.024
+22 1 cons extra    0.435    0.031
+22 1 cons agree    0.650    0.028
+22 1 cons neuro   -0.664    0.030
+22 1 extra ed    0.031    0.020
+22 1 extra agree    0.387    0.030
+22 1 extra neuro   -0.442    0.025
+22 1 agree ed    0.070    0.024
+22 1 agree neuro   -0.668    0.027
+22 1 neuro ed   -0.152    0.020
+25 1 ed    1.000    0.000
+25 1 open    1.000    0.000
+25 1 cons    1.000    0.000
+25 1 extra    1.000    0.000
+25 1 agree    1.000    0.000
+25 1 neuro    1.000    0.000
+25 1 mrs    1.000    0.000
+25 1 ers    1.000    0.000
+25 1 ons    1.000    0.000
+31 1 open o_1    1.306    0.073
+31 1 open o_2    0.946    0.068
+31 1 open o_3    0.978    0.053
+31 1 open o_4    1.030    0.052
+31 1 open o_5    1.214    0.059
+31 1 open o_6    0.782    0.043
+31 1 open o_7    0.383    0.026
+31 1 open o_8    1.020    0.060
+31 1 open o_9    0.330    0.022
+31 1 open o_10    0.760    0.034
+31 1 open oex93    0.325    0.127
+31 1 open oex98    0.045    0.139
+31 1 open oex103    0.191    0.099
+31 1 open oex108   -0.046    0.095
+31 1 open oex113    0.382    0.089
+31 1 open oex118    0.003    0.079
+31 1 open oex123    0.032    0.035
+31 1 open oex128    0.295    0.128
+31 1 open oex129   -0.105    0.040
+31 1 open oex132    0.224    0.038
+31 1 open oex137    0.762    0.041
+31 1 open oex142    0.660    0.033
+31 1 open oex147    0.519    0.036
+31 1 open oex152    0.630    0.038
+31 1 open oex157    0.766    0.048
+31 1 open oex162    0.594    0.035
+31 1 open oex167    0.206    0.036
+31 1 open oex172    0.739    0.040
+31 1 open oex173    0.478    0.035
+31 1 open oex176    0.440    0.042
+31 1 open om5   -0.567    0.031
+31 1 open om10   -0.562    0.035
+31 1 open om15   -0.385    0.025
+31 1 open om20   -0.461    0.027
+31 1 open om25   -0.410    0.025
+31 1 open om30   -0.423    0.026
+31 1 open om35    0.010    0.021
+31 1 open om40   -0.549    0.030
+31 1 open om41   -0.234    0.024
+31 1 open om44    0.007    0.021
+31 1 cons c_1    0.547    0.055
+31 1 cons c_2    0.602    0.032
+31 1 cons c_3    0.760    0.080
+31 1 cons c_4    0.721    0.035
+31 1 cons c_5    0.962    0.045
+31 1 cons c_6    0.736    0.053
+31 1 cons c_7    0.886    0.072
+31 1 cons c_8    0.831    0.051
+31 1 cons c_9    0.725    0.036
+31 1 cons cex91   -0.369    0.108
+31 1 cons cex96    0.198    0.062
+31 1 cons cex101   -0.345    0.232
+31 1 cons cex106    0.239    0.054
+31 1 cons cex111   -0.043    0.090
+31 1 cons cex116   -0.366    0.123
+31 1 cons cex121   -0.150    0.219
+31 1 cons cex126   -0.050    0.150
+31 1 cons cex131    0.340    0.053
+31 1 cons cex135    0.711    0.035
+31 1 cons cex140    0.490    0.034
+31 1 cons cex145    0.884    0.044
+31 1 cons cex150    0.612    0.039
+31 1 cons cex155    0.643    0.040
+31 1 cons cex160    0.734    0.036
+31 1 cons cex165    0.864    0.040
+31 1 cons cex170    0.740    0.036
+31 1 cons cex175    0.569    0.046
+31 1 cons cm3   -0.593    0.045
+31 1 cons cm8   -0.229    0.024
+31 1 cons cm13   -0.697    0.059
+31 1 cons cm18   -0.221    0.026
+31 1 cons cm23   -0.434    0.029
+31 1 cons cm28   -0.542    0.035
+31 1 cons cm33   -0.708    0.043
+31 1 cons cm38   -0.623    0.035
+31 1 cons cm43   -0.158    0.023
+31 1 extra e_1    1.074    0.045
+31 1 extra e_2    0.641    0.037
+31 1 extra e_3    0.862    0.043
+31 1 extra e_4    1.297    0.072
+31 1 extra e_5    0.918    0.048
+31 1 extra e_6    0.988    0.043
+31 1 extra e_7    0.875    0.041
+31 1 extra e_8    1.578    0.072
+31 1 extra eex89    0.216    0.059
+31 1 extra eex94    0.302    0.038
+31 1 extra eex99    0.224    0.061
+31 1 extra eex104    0.358    0.108
+31 1 extra eex109    0.750    0.052
+31 1 extra eex114    0.282    0.071
+31 1 extra eex119    0.542    0.049
+31 1 extra eex124    0.456    0.089
+31 1 extra eex133    0.589    0.041
+31 1 extra eex138    0.375    0.052
+31 1 extra eex143    0.511    0.038
+31 1 extra eex148    0.696    0.043
+31 1 extra eex153    0.402    0.050
+31 1 extra eex158    0.460    0.038
+31 1 extra eex163    0.548    0.050
+31 1 extra eex168    1.021    0.052
+31 1 extra em1   -0.148    0.024
+31 1 extra em6    0.112    0.023
+31 1 extra em11   -0.339    0.023
+31 1 extra em16   -0.538    0.027
+31 1 extra em21    0.139    0.024
+31 1 extra em26   -0.262    0.023
+31 1 extra em31    0.067    0.023
+31 1 extra em36   -0.381    0.026
+31 1 agree a_1    0.628    0.033
+31 1 agree a_2    0.511    0.050
+31 1 agree a_3    0.692    0.051
+31 1 agree a_4    0.726    0.041
+31 1 agree a_5    0.536    0.037
+31 1 agree a_6    0.765    0.036
+31 1 agree a_7    0.771    0.072
+31 1 agree a_8    0.822    0.040
+31 1 agree a_9    0.702    0.052
+31 1 agree aex90    0.287    0.057
+31 1 agree aex95   -0.624    0.151
+31 1 agree aex100   -0.388    0.149
+31 1 agree aex105    0.129    0.098
+31 1 agree aex110    0.106    0.078
+31 1 agree aex115    0.067    0.067
+31 1 agree aex120   -0.351    0.194
+31 1 agree aex125   -0.072    0.089
+31 1 agree aex130   -0.236    0.152
+31 1 agree aex134    0.435    0.038
+31 1 agree aex139    0.700    0.036
+31 1 agree aex144    0.576    0.034
+31 1 agree aex149    0.556    0.034
+31 1 agree aex154    0.371    0.028
+31 1 agree aex159    0.646    0.038
+31 1 agree aex164    0.843    0.045
+31 1 agree aex169    0.641    0.039
+31 1 agree aex174    0.715    0.037
+31 1 agree am2   -0.114    0.023
+31 1 agree am7   -0.614    0.043
+31 1 agree am12   -0.437    0.030
+31 1 agree am17   -0.365    0.033
+31 1 agree am22   -0.268    0.031
+31 1 agree am27   -0.246    0.024
+31 1 agree am32   -0.703    0.048
+31 1 agree am37   -0.341    0.029
+31 1 agree am42   -0.542    0.035
+31 1 neuro n_1    0.879    0.037
+31 1 neuro n_2    1.102    0.046
+31 1 neuro n_3    0.792    0.035
+31 1 neuro n_4    0.862    0.034
+31 1 neuro n_5    0.995    0.047
+31 1 neuro n_6    0.937    0.036
+31 1 neuro n_7    0.962    0.045
+31 1 neuro n_8    1.018    0.041
+31 1 neuro nex92    0.590    0.035
+31 1 neuro nex97    0.647    0.040
+31 1 neuro nex102    0.584    0.059
+31 1 neuro nex107    0.565    0.047
+31 1 neuro nex112    0.907    0.042
+31 1 neuro nex117    0.562    0.048
+31 1 neuro nex122    0.624    0.035
+31 1 neuro nex127    0.655    0.045
+31 1 neuro nex136    0.338    0.075
+31 1 neuro nex141    0.589    0.069
+31 1 neuro nex146    0.474    0.042
+31 1 neuro nex151    0.649    0.048
+31 1 neuro nex156   -0.038    0.077
+31 1 neuro nex161    0.624    0.049
+31 1 neuro nex166    0.275    0.111
+31 1 neuro nex171    0.508    0.058
+31 1 neuro nm4    0.367    0.026
+31 1 neuro nm9    0.211    0.025
+31 1 neuro nm14   -0.137    0.023
+31 1 neuro nm19   -0.117    0.024
+31 1 neuro nm24    0.524    0.029
+31 1 neuro nm29   -0.011    0.024
+31 1 neuro nm34    0.506    0.035
+31 1 neuro nm39    0.082    0.023
+31 1 mrs em1    0.505    0.029
+31 1 mrs am2    0.428    0.025
+31 1 mrs cm3    0.430    0.047
+31 1 mrs nm4    0.345    0.028
+31 1 mrs om5    0.521    0.034
+31 1 mrs em6    0.540    0.027
+31 1 mrs am7    0.605    0.049
+31 1 mrs cm8    0.475    0.028
+31 1 mrs nm9    0.570    0.030
+31 1 mrs om10    0.464    0.038
+31 1 mrs em11    0.533    0.030
+31 1 mrs am12    0.381    0.036
+31 1 mrs cm13    0.575    0.065
+31 1 mrs nm14    0.577    0.028
+31 1 mrs om15    0.624    0.031
+31 1 mrs em16    0.545    0.033
+31 1 mrs am17    0.627    0.039
+31 1 mrs cm18    0.566    0.033
+31 1 mrs nm19    0.538    0.027
+31 1 mrs om20    0.565    0.032
+31 1 mrs em21    0.582    0.031
+31 1 mrs am22    0.503    0.035
+31 1 mrs cm23    0.534    0.034
+31 1 mrs nm24    0.645    0.033
+31 1 mrs om25    0.563    0.031
+31 1 mrs em26    0.611    0.029
+31 1 mrs am27    0.531    0.029
+31 1 mrs cm28    0.651    0.044
+31 1 mrs nm29    0.618    0.030
+31 1 mrs om30    0.592    0.031
+31 1 mrs em31    0.618    0.029
+31 1 mrs am32    0.747    0.055
+31 1 mrs cm33    0.674    0.052
+31 1 mrs nm34    0.662    0.037
+31 1 mrs om35    0.447    0.023
+31 1 mrs em36    0.560    0.032
+31 1 mrs am37    0.552    0.033
+31 1 mrs cm38    0.662    0.044
+31 1 mrs nm39    0.608    0.028
+31 1 mrs om40    0.669    0.035
+31 1 mrs om41    0.559    0.030
+31 1 mrs am42    0.593    0.045
+31 1 mrs cm43    0.577    0.029
+31 1 mrs om44    0.428    0.025
+31 1 ers eex89   -0.612    0.049
+31 1 ers aex90   -0.476    0.051
+31 1 ers cex91   -0.530    0.091
+31 1 ers nex92   -0.320    0.031
+31 1 ers oex93   -0.711    0.090
+31 1 ers eex94   -0.695    0.039
+31 1 ers aex95   -0.687    0.102
+31 1 ers cex96   -0.583    0.063
+31 1 ers nex97   -0.776    0.040
+31 1 ers oex98   -0.962    0.129
+31 1 ers eex99   -0.589    0.061
+31 1 ers aex100   -0.735    0.117
+31 1 ers cex101   -0.735    0.167
+31 1 ers nex102   -0.844    0.059
+31 1 ers oex103   -0.798    0.084
+31 1 ers eex104   -0.843    0.095
+31 1 ers aex105   -0.705    0.080
+31 1 ers cex106   -0.502    0.045
+31 1 ers nex107   -0.662    0.046
+31 1 ers oex108   -0.871    0.084
+31 1 ers eex109   -0.846    0.046
+31 1 ers aex110   -0.613    0.080
+31 1 ers cex111   -0.640    0.066
+31 1 ers nex112   -0.757    0.040
+31 1 ers oex113   -0.739    0.073
+31 1 ers eex114   -0.768    0.067
+31 1 ers aex115   -0.694    0.055
+31 1 ers cex116   -1.080    0.157
+31 1 ers nex117   -0.732    0.044
+31 1 ers oex118   -0.776    0.079
+31 1 ers eex119   -0.905    0.055
+31 1 ers aex120   -0.649    0.132
+31 1 ers cex121   -1.266    0.201
+31 1 ers nex122   -0.811    0.036
+31 1 ers oex123   -0.766    0.038
+31 1 ers eex124   -0.734    0.068
+31 1 ers aex125   -0.699    0.074
+31 1 ers cex126   -0.854    0.113
+31 1 ers nex127   -0.789    0.044
+31 1 ers oex128   -0.876    0.121
+31 1 ers oex129   -0.629    0.040
+31 1 ers aex130   -0.887    0.124
+31 1 ers cex131   -0.522    0.045
+31 1 ers oex132   -0.447    0.034
+31 1 ers eex133    0.534    0.033
+31 1 ers aex134    0.569    0.038
+31 1 ers cex135    0.643    0.042
+31 1 ers nex136    0.496    0.062
+31 1 ers oex137    0.861    0.044
+31 1 ers eex138    0.675    0.049
+31 1 ers aex139    0.908    0.044
+31 1 ers cex140    0.590    0.038
+31 1 ers nex141    0.664    0.059
+31 1 ers oex142    0.649    0.033
+31 1 ers eex143    0.747    0.040
+31 1 ers aex144    0.535    0.042
+31 1 ers cex145    0.639    0.051
+31 1 ers nex146    0.639    0.041
+31 1 ers oex147    0.828    0.038
+31 1 ers eex148    0.893    0.044
+31 1 ers aex149    0.775    0.040
+31 1 ers cex150    0.658    0.046
+31 1 ers nex151    0.576    0.040
+31 1 ers oex152    0.841    0.042
+31 1 ers eex153    0.731    0.046
+31 1 ers aex154    0.740    0.035
+31 1 ers cex155    0.676    0.045
+31 1 ers nex156    0.688    0.069
+31 1 ers oex157    0.973    0.046
+31 1 ers eex158    0.863    0.040
+31 1 ers aex159    0.769    0.049
+31 1 ers cex160    0.865    0.050
+31 1 ers nex161    0.698    0.045
+31 1 ers oex162    0.709    0.037
+31 1 ers eex163    0.806    0.048
+31 1 ers aex164    0.995    0.054
+31 1 ers cex165    0.963    0.053
+31 1 ers nex166    0.912    0.094
+31 1 ers oex167    0.598    0.041
+31 1 ers eex168    0.820    0.045
+31 1 ers aex169    0.741    0.045
+31 1 ers cex170    0.869    0.046
+31 1 ers nex171    0.718    0.060
+31 1 ers oex172    0.881    0.043
+31 1 ers oex173    0.662    0.040
+31 1 ers aex174    0.974    0.049
+31 1 ers cex175    0.914    0.053
+31 1 ers oex176    0.614    0.040
+31 1 ons ons177    0.758    0.027
+31 1 ons ons178    0.815    0.027
+31 1 ons ons179    1.280    0.046
+31 1 ons ons180    0.761    0.030
+31 1 ons ons181    0.898    0.032
+31 1 ons ons182    0.638    0.025
+31 1 ons ons183    0.699    0.038
+31 1 ons ons184    0.540    0.047
+31 1 ons ons185    1.499    0.059
+31 1 ons ons186    0.762    0.029
+31 1 ons ons187    1.202    0.051
+31 1 ons ons188    0.379    0.020
+31 1 ons ons189    0.709    0.027
+32 1 ers ed   -0.448    0.046
+32 1 ers mrs   -0.529    0.032
+32 1 ers ons   -0.321    0.028
+32 1 ers open   -0.102    0.048
+32 1 ers cons   -0.193    0.063
+32 1 ers extra   -0.022    0.045
+32 1 ers agree   -0.284    0.054
+32 1 ers neuro    0.138    0.047
+32 1 mrs ed   -0.072    0.045
+32 1 mrs ons    0.017    0.029
+32 1 mrs open    0.006    0.045
+32 1 mrs cons    0.087    0.052
+32 1 mrs extra    0.043    0.043
+32 1 mrs agree    0.126    0.050
+32 1 mrs neuro   -0.016    0.047
+32 1 ons ed    1.092    0.033
+32 1 ons open    0.283    0.033
+32 1 ons cons    0.097    0.042
+32 1 ons extra   -0.074    0.036
+32 1 ons agree   -0.018    0.041
+32 1 ons neuro   -0.139    0.036
+32 1 open ed    0.574    0.048
+32 1 open cons    0.356    0.033
+32 1 open extra    0.479    0.028
+32 1 open agree    0.274    0.035
+32 1 open neuro   -0.316    0.036
+32 1 cons ed    0.372    0.057
+32 1 cons extra    0.435    0.031
+32 1 cons agree    0.650    0.028
+32 1 cons neuro   -0.664    0.030
+32 1 extra ed    0.072    0.048
+32 1 extra agree    0.387    0.030
+32 1 extra neuro   -0.442    0.025
+32 1 agree ed    0.163    0.056
+32 1 agree neuro   -0.668    0.027
+32 1 neuro ed   -0.355    0.047
+35 1 ed    5.491    0.112
+35 1 open    1.000    0.000
+35 1 cons    1.000    0.000
+35 1 extra    1.000    0.000
+35 1 agree    1.000    0.000
+35 1 neuro    1.000    0.000
+35 1 mrs    1.000    0.000
+35 1 ers    1.000    0.000
+35 1 ons    1.000    0.000
