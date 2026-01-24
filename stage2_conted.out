@@ -1,0 +1,703 @@
+Mplus VERSION 8.8
+MUTHEN & MUTHEN
+01/23/2026   2:56 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: Stage 2 SEM using stage-1 model-implied latent covariance matrix;
+
+  DATA:
+    FILE = vcov_ed.dat;
+    TYPE = COVARIANCE;
+    NOBSERVATIONS = 7156;
+
+  VARIABLE:
+    NAMES = ED OPEN CONS EXTRA AGREE NEURO MRS ERS ONS;
+    USEVARIABLES = ED OPEN CONS EXTRA AGREE NEURO MRS ERS ONS;
+
+  ANALYSIS:
+    ESTIMATOR = ML;
+
+  MODEL:
+    ! Regressions
+    MRS ON ONS ED;
+    ERS ON ONS ED;
+    ONS ON ED;
+
+  !correlations
+    MRS WITH ERS OPEN CONS EXTRA AGREE NEURO;
+    ERS WITH OPEN CONS EXTRA AGREE NEURO;
+    OPEN WITH CONS EXTRA AGREE NEURO ONS;
+    CONS WITH EXTRA AGREE NEURO ONS;
+    EXTRA WITH AGREE NEURO ONS;
+    AGREE WITH NEURO ONS;
+    NEURO WITH ONS
+
+  OUTPUT:
+    STANDARDIZED;
+    TECH1;
+    MODINDICES;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Stage 2 SEM using stage-1 model-implied latent covariance matrix;
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        7156
+
+Number of dependent variables                                    8
+Number of independent variables                                  1
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   OPEN        CONS        EXTRA       AGREE       NEURO       MRS
+   ERS         ONS
+
+Observed independent variables
+   ED
+
+
+Estimator                                                       ML
+Information matrix                                        EXPECTED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  vcov_ed.dat
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       39
+
+Loglikelihood
+
+          H0 Value                      -54418.209
+          H1 Value                      -54073.280
+
+Information Criteria
+
+          Akaike (AIC)                  108914.419
+          Bayesian (BIC)                109182.572
+          Sample-Size Adjusted BIC      109058.638
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            689.859
+          Degrees of Freedom                     5
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.138
+          90 Percent C.I.                    0.130  0.147
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.968
+          TLI                                0.767
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                          21238.535
+          Degrees of Freedom                    36
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.058
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MRS      ON
+    ONS                0.025      0.009      2.815      0.005
+    ED                -0.009      0.003     -3.213      0.001
+
+ ERS      ON
+    ONS               -0.239      0.010    -23.525      0.000
+    ED                -0.015      0.003     -5.059      0.000
+
+ ONS      ON
+    ED                 0.123      0.003     38.910      0.000
+
+ MRS      WITH
+    ERS               -0.162      0.004    -41.030      0.000
+    OPEN               0.004      0.008      0.473      0.636
+    CONS               0.025      0.003      7.577      0.000
+    EXTRA              0.025      0.006      3.945      0.000
+    AGREE              0.041      0.004     10.903      0.000
+    NEURO             -0.007      0.005     -1.426      0.154
+
+ ERS      WITH
+    OPEN              -0.004      0.009     -0.408      0.684
+    CONS              -0.052      0.004    -13.800      0.000
+    EXTRA             -0.028      0.007     -3.843      0.000
+    AGREE             -0.109      0.004    -24.389      0.000
+    NEURO              0.047      0.006      7.842      0.000
+
+ OPEN     WITH
+    CONS               0.254      0.009     28.345      0.000
+    EXTRA              0.672      0.018     36.540      0.000
+    AGREE              0.225      0.010     22.388      0.000
+    NEURO             -0.363      0.014    -25.497      0.000
+    ONS                0.188      0.011     17.647      0.000
+
+ CONS     WITH
+    EXTRA              0.256      0.008     33.797      0.000
+    AGREE              0.223      0.005     46.088      0.000
+    NEURO             -0.319      0.007    -46.771      0.000
+    ONS                0.015      0.004      3.432      0.001
+
+ EXTRA    WITH
+    AGREE              0.261      0.009     30.536      0.000
+    NEURO             -0.417      0.012    -34.167      0.000
+    ONS               -0.070      0.009     -8.106      0.000
+
+ AGREE    WITH
+    NEURO             -0.369      0.008    -47.020      0.000
+    ONS               -0.021      0.005     -4.141      0.000
+
+ NEURO    WITH
+    ONS               -0.053      0.007     -7.615      0.000
+
+ Variances
+    OPEN               1.706      0.029     59.816      0.000
+    CONS               0.299      0.005     59.816      0.000
+    EXTRA              1.154      0.019     59.816      0.000
+    AGREE              0.394      0.007     59.816      0.000
+    NEURO              0.773      0.013     59.816      0.000
+
+ Residual Variances
+    MRS                0.254      0.004     59.816      0.000
+    ERS                0.335      0.006     59.816      0.000
+    ONS                0.453      0.008     59.816      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.137E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MRS      ON
+    ONS                0.036      0.013      2.817      0.005
+    ED                -0.041      0.013     -3.215      0.001
+
+ ERS      ON
+    ONS               -0.287      0.012    -24.408      0.000
+    ED                -0.059      0.012     -5.061      0.000
+
+ ONS      ON
+    ED                 0.395      0.009     41.871      0.000
+
+ MRS      WITH
+    ERS               -0.555      0.008    -67.764      0.000
+    OPEN               0.005      0.012      0.473      0.636
+    CONS               0.090      0.012      7.669      0.000
+    EXTRA              0.046      0.012      3.958      0.000
+    AGREE              0.130      0.012     11.183      0.000
+    NEURO             -0.017      0.012     -1.427      0.154
+
+ ERS      WITH
+    OPEN              -0.005      0.012     -0.408      0.684
+    CONS              -0.165      0.011    -14.379      0.000
+    EXTRA             -0.045      0.012     -3.855      0.000
+    AGREE             -0.301      0.011    -28.002      0.000
+    NEURO              0.093      0.012      7.944      0.000
+
+ OPEN     WITH
+    CONS               0.356      0.010     34.441      0.000
+    EXTRA              0.479      0.009     52.573      0.000
+    AGREE              0.274      0.011     25.107      0.000
+    NEURO             -0.316      0.011    -29.709      0.000
+    ONS                0.213      0.011     18.905      0.000
+
+ CONS     WITH
+    EXTRA              0.436      0.010     45.510      0.000
+    AGREE              0.650      0.007     95.109      0.000
+    NEURO             -0.664      0.007   -100.285      0.000
+    ONS                0.041      0.012      3.441      0.001
+
+ EXTRA    WITH
+    AGREE              0.387      0.010     38.513      0.000
+    NEURO             -0.442      0.010    -46.392      0.000
+    ONS               -0.096      0.012     -8.220      0.000
+
+ AGREE    WITH
+    NEURO             -0.669      0.007   -102.295      0.000
+    ONS               -0.049      0.012     -4.156      0.000
+
+ NEURO    WITH
+    ONS               -0.090      0.012     -7.709      0.000
+
+ Variances
+    OPEN               1.000      0.000    999.000    999.000
+    CONS               1.000      0.000    999.000    999.000
+    EXTRA              1.000      0.000    999.000    999.000
+    AGREE              1.000      0.000    999.000    999.000
+    NEURO              1.000      0.000    999.000    999.000
+
+ Residual Variances
+    MRS                0.998      0.001   1000.011      0.000
+    ERS                0.901      0.007    136.115      0.000
+    ONS                0.844      0.007    113.488      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MRS      ON
+    ONS                0.036      0.013      2.817      0.005
+    ED                -0.017      0.005     -3.217      0.001
+
+ ERS      ON
+    ONS               -0.287      0.012    -24.408      0.000
+    ED                -0.025      0.005     -5.065      0.000
+
+ ONS      ON
+    ED                 0.168      0.004     43.757      0.000
+
+ MRS      WITH
+    ERS               -0.555      0.008    -67.764      0.000
+    OPEN               0.005      0.012      0.473      0.636
+    CONS               0.090      0.012      7.669      0.000
+    EXTRA              0.046      0.012      3.958      0.000
+    AGREE              0.130      0.012     11.183      0.000
+    NEURO             -0.017      0.012     -1.427      0.154
+
+ ERS      WITH
+    OPEN              -0.005      0.012     -0.408      0.684
+    CONS              -0.165      0.011    -14.379      0.000
+    EXTRA             -0.045      0.012     -3.855      0.000
+    AGREE             -0.301      0.011    -28.002      0.000
+    NEURO              0.093      0.012      7.944      0.000
+
+ OPEN     WITH
+    CONS               0.356      0.010     34.441      0.000
+    EXTRA              0.479      0.009     52.573      0.000
+    AGREE              0.274      0.011     25.107      0.000
+    NEURO             -0.316      0.011    -29.709      0.000
+    ONS                0.213      0.011     18.905      0.000
+
+ CONS     WITH
+    EXTRA              0.436      0.010     45.510      0.000
+    AGREE              0.650      0.007     95.109      0.000
+    NEURO             -0.664      0.007   -100.285      0.000
+    ONS                0.041      0.012      3.441      0.001
+
+ EXTRA    WITH
+    AGREE              0.387      0.010     38.513      0.000
+    NEURO             -0.442      0.010    -46.392      0.000
+    ONS               -0.096      0.012     -8.220      0.000
+
+ AGREE    WITH
+    NEURO             -0.669      0.007   -102.295      0.000
+    ONS               -0.049      0.012     -4.156      0.000
+
+ NEURO    WITH
+    ONS               -0.090      0.012     -7.709      0.000
+
+ Variances
+    OPEN               1.000      0.000    999.000    999.000
+    CONS               1.000      0.000    999.000    999.000
+    EXTRA              1.000      0.000    999.000    999.000
+    AGREE              1.000      0.000    999.000    999.000
+    NEURO              1.000      0.000    999.000    999.000
+
+ Residual Variances
+    MRS                0.998      0.001   1000.011      0.000
+    ERS                0.901      0.007    136.115      0.000
+    ONS                0.844      0.007    113.488      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MRS      ON
+    ONS                0.025      0.009      2.815      0.005
+    ED                -0.009      0.003     -3.213      0.001
+
+ ERS      ON
+    ONS               -0.239      0.010    -23.525      0.000
+    ED                -0.015      0.003     -5.059      0.000
+
+ ONS      ON
+    ED                 0.123      0.003     38.910      0.000
+
+ MRS      WITH
+    ERS               -0.162      0.004    -41.030      0.000
+    OPEN               0.004      0.008      0.473      0.636
+    CONS               0.025      0.003      7.577      0.000
+    EXTRA              0.025      0.006      3.945      0.000
+    AGREE              0.041      0.004     10.903      0.000
+    NEURO             -0.007      0.005     -1.426      0.154
+
+ ERS      WITH
+    OPEN              -0.004      0.009     -0.408      0.684
+    CONS              -0.052      0.004    -13.800      0.000
+    EXTRA             -0.028      0.007     -3.843      0.000
+    AGREE             -0.109      0.004    -24.389      0.000
+    NEURO              0.047      0.006      7.842      0.000
+
+ OPEN     WITH
+    CONS               0.254      0.009     28.345      0.000
+    EXTRA              0.672      0.018     36.540      0.000
+    AGREE              0.225      0.010     22.388      0.000
+    NEURO             -0.363      0.014    -25.497      0.000
+    ONS                0.188      0.011     17.647      0.000
+
+ CONS     WITH
+    EXTRA              0.256      0.008     33.797      0.000
+    AGREE              0.223      0.005     46.088      0.000
+    NEURO             -0.319      0.007    -46.771      0.000
+    ONS                0.015      0.004      3.432      0.001
+
+ EXTRA    WITH
+    AGREE              0.261      0.009     30.536      0.000
+    NEURO             -0.417      0.012    -34.167      0.000
+    ONS               -0.070      0.009     -8.106      0.000
+
+ AGREE    WITH
+    NEURO             -0.369      0.008    -47.020      0.000
+    ONS               -0.021      0.005     -4.141      0.000
+
+ NEURO    WITH
+    ONS               -0.053      0.007     -7.615      0.000
+
+ Variances
+    OPEN               1.706      0.029     59.816      0.000
+    CONS               0.299      0.005     59.816      0.000
+    EXTRA              1.154      0.019     59.816      0.000
+    AGREE              0.394      0.007     59.816      0.000
+    NEURO              0.773      0.013     59.816      0.000
+
+ Residual Variances
+    MRS                0.254      0.004     59.816      0.000
+    ERS                0.335      0.006     59.816      0.000
+    ONS                0.453      0.008     59.816      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    MRS                0.002      0.001      1.811      0.070
+    ERS                0.099      0.007     14.999      0.000
+    ONS                0.156      0.007     20.936      0.000
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    10.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+ON Statements
+
+OPEN     ON MRS                  388.429   -19.601    -19.601       -7.577
+OPEN     ON ERS                  389.122    -2.501     -2.501       -1.169
+OPEN     ON ONS                  389.111     0.908      0.908        0.509
+OPEN     ON ED                   389.110     0.112      0.112        0.201
+CONS     ON MRS                   41.843    -2.119     -2.119       -1.957
+CONS     ON ERS                   42.150    -0.271     -0.271       -0.303
+CONS     ON ONS                   42.127     0.098      0.098        0.132
+CONS     ON ED                    42.122     0.012      0.012        0.052
+EXTRA    ON MRS                  131.565     8.841      8.841        4.156
+EXTRA    ON ERS                  131.787     1.128      1.128        0.641
+EXTRA    ON ONS                  131.785    -0.410     -0.410       -0.279
+EXTRA    ON ED                   131.794    -0.051     -0.051       -0.110
+AGREE    ON MRS                   35.128     2.265      2.265        1.822
+AGREE    ON ERS                   35.186     0.289      0.289        0.281
+AGREE    ON ONS                   35.185    -0.105     -0.105       -0.122
+AGREE    ON ED                    35.187    -0.013     -0.013       -0.048
+NEURO    ON MRS                   56.415     3.897      3.897        2.238
+NEURO    ON ERS                   56.203     0.496      0.496        0.344
+NEURO    ON ONS                   56.225    -0.180     -0.180       -0.150
+NEURO    ON ED                    56.232    -0.022     -0.022       -0.059
+
+WITH Statements
+
+ED       WITH OPEN               389.110     0.615      0.615        0.201
+ED       WITH CONS                42.122     0.067      0.067        0.052
+ED       WITH EXTRA              131.794    -0.277     -0.277       -0.110
+ED       WITH AGREE               35.187    -0.071     -0.071       -0.048
+ED       WITH NEURO               56.232    -0.122     -0.122       -0.059
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           LAMBDA
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN               0             0             0             0             0
+ CONS               0             0             0             0             0
+ EXTRA              0             0             0             0             0
+ AGREE              0             0             0             0             0
+ NEURO              0             0             0             0             0
+ MRS                0             0             0             0             0
+ ERS                0             0             0             0             0
+ ONS                0             0             0             0             0
+ ED                 0             0             0             0             0
+
+
+           LAMBDA
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ OPEN               0             0             0             0
+ CONS               0             0             0             0
+ EXTRA              0             0             0             0
+ AGREE              0             0             0             0
+ NEURO              0             0             0             0
+ MRS                0             0             0             0
+ ERS                0             0             0             0
+ ONS                0             0             0             0
+ ED                 0             0             0             0
+
+
+           THETA
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN               0
+ CONS               0             0
+ EXTRA              0             0             0
+ AGREE              0             0             0             0
+ NEURO              0             0             0             0             0
+ MRS                0             0             0             0             0
+ ERS                0             0             0             0             0
+ ONS                0             0             0             0             0
+ ED                 0             0             0             0             0
+
+
+           THETA
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ MRS                0
+ ERS                0             0
+ ONS                0             0             0
+ ED                 0             0             0             0
+
+
+           BETA
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN               0             0             0             0             0
+ CONS               0             0             0             0             0
+ EXTRA              0             0             0             0             0
+ AGREE              0             0             0             0             0
+ NEURO              0             0             0             0             0
+ MRS                0             0             0             0             0
+ ERS                0             0             0             0             0
+ ONS                0             0             0             0             0
+ ED                 0             0             0             0             0
+
+
+           BETA
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ OPEN               0             0             0             0
+ CONS               0             0             0             0
+ EXTRA              0             0             0             0
+ AGREE              0             0             0             0
+ NEURO              0             0             0             0
+ MRS                0             0             1             2
+ ERS                0             0             3             4
+ ONS                0             0             0             5
+ ED                 0             0             0             0
+
+
+           PSI
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN               6
+ CONS               7             8
+ EXTRA              9            10            11
+ AGREE             12            13            14            15
+ NEURO             16            17            18            19            20
+ MRS               21            22            23            24            25
+ ERS               27            28            29            30            31
+ ONS               34            35            36            37            38
+ ED                 0             0             0             0             0
+
+
+           PSI
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ MRS               26
+ ERS               32            33
+ ONS                0             0            39
+ ED                 0             0             0             0
+
+
+     STARTING VALUES
+
+
+           LAMBDA
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN           1.000         0.000         0.000         0.000         0.000
+ CONS           0.000         1.000         0.000         0.000         0.000
+ EXTRA          0.000         0.000         1.000         0.000         0.000
+ AGREE          0.000         0.000         0.000         1.000         0.000
+ NEURO          0.000         0.000         0.000         0.000         1.000
+ MRS            0.000         0.000         0.000         0.000         0.000
+ ERS            0.000         0.000         0.000         0.000         0.000
+ ONS            0.000         0.000         0.000         0.000         0.000
+ ED             0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ OPEN           0.000         0.000         0.000         0.000
+ CONS           0.000         0.000         0.000         0.000
+ EXTRA          0.000         0.000         0.000         0.000
+ AGREE          0.000         0.000         0.000         0.000
+ NEURO          0.000         0.000         0.000         0.000
+ MRS            1.000         0.000         0.000         0.000
+ ERS            0.000         1.000         0.000         0.000
+ ONS            0.000         0.000         1.000         0.000
+ ED             0.000         0.000         0.000         1.000
+
+
+           THETA
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN           0.000
+ CONS           0.000         0.000
+ EXTRA          0.000         0.000         0.000
+ AGREE          0.000         0.000         0.000         0.000
+ NEURO          0.000         0.000         0.000         0.000         0.000
+ MRS            0.000         0.000         0.000         0.000         0.000
+ ERS            0.000         0.000         0.000         0.000         0.000
+ ONS            0.000         0.000         0.000         0.000         0.000
+ ED             0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ MRS            0.000
+ ERS            0.000         0.000
+ ONS            0.000         0.000         0.000
+ ED             0.000         0.000         0.000         0.000
+
+
+           BETA
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN           0.000         0.000         0.000         0.000         0.000
+ CONS           0.000         0.000         0.000         0.000         0.000
+ EXTRA          0.000         0.000         0.000         0.000         0.000
+ AGREE          0.000         0.000         0.000         0.000         0.000
+ NEURO          0.000         0.000         0.000         0.000         0.000
+ MRS            0.000         0.000         0.000         0.000         0.000
+ ERS            0.000         0.000         0.000         0.000         0.000
+ ONS            0.000         0.000         0.000         0.000         0.000
+ ED             0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ OPEN           0.000         0.000         0.000         0.000
+ CONS           0.000         0.000         0.000         0.000
+ EXTRA          0.000         0.000         0.000         0.000
+ AGREE          0.000         0.000         0.000         0.000
+ NEURO          0.000         0.000         0.000         0.000
+ MRS            0.000         0.000         0.000         0.000
+ ERS            0.000         0.000         0.000         0.000
+ ONS            0.000         0.000         0.000         0.000
+ ED             0.000         0.000         0.000         0.000
+
+
+           PSI
+              OPEN          CONS          EXTRA         AGREE         NEURO
+              ________      ________      ________      ________      ________
+ OPEN           0.853
+ CONS           0.000         0.149
+ EXTRA          0.000         0.000         0.577
+ AGREE          0.000         0.000         0.000         0.197
+ NEURO          0.000         0.000         0.000         0.000         0.387
+ MRS            0.000         0.000         0.000         0.000         0.000
+ ERS            0.000         0.000         0.000         0.000         0.000
+ ONS            0.000         0.000         0.000         0.000         0.000
+ ED             0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              MRS           ERS           ONS           ED
+              ________      ________      ________      ________
+ MRS            0.127
+ ERS            0.000         0.188
+ ONS            0.000         0.000         0.287
+ ED             0.000         0.000         0.000         5.490
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\users\jblock\desktop\numeracy-uas-v1-main\irtree-and-numeracy-mplus-main\stage2_conted.dgm
+
+     Beginning Time:  14:56:25
+        Ending Time:  14:56:26
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2022 Muthen & Muthen
